@@ -229,9 +229,18 @@
         
         .truth-item {
             display: flex;
-            justify-content: space-between;
+            gap: 20px;
             padding: 15px 0;
             border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .truth-item strong {
+            color: var(--gold);
+            white-space: nowrap;
+        }
+        
+        .truth-item span {
+            flex: 1;
         }
         
         /* Campaign Strategy */
@@ -341,33 +350,6 @@
             font-size: 0.8rem;
         }
         
-        /* ROI */
-        .roi-grid {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 30px;
-        }
-        
-        .roi-card {
-            text-align: center;
-            padding: 30px 20px;
-            background: white;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-        }
-        
-        .roi-number {
-            font-size: 2.5rem;
-            color: var(--gold);
-            font-weight: 700;
-        }
-        
-        .roi-label {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 10px;
-        }
-        
         /* CTA */
         .cta {
             background: var(--charcoal);
@@ -420,8 +402,7 @@
             .stats,
             .partnership-grid,
             .campaign-grid,
-            .packages-grid,
-            .roi-grid {
+            .packages-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -458,16 +439,16 @@
                     <span class="stat-label">Established</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number">$847M</span>
-                    <span class="stat-label">Reader Purchases</span>
+                    <span class="stat-number">6</span>
+                    <span class="stat-label">Generations</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number">15M</span>
-                    <span class="stat-label">Total Reach</span>
+                    <span class="stat-number">160</span>
+                    <span class="stat-label">Years</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number">3.2X</span>
-                    <span class="stat-label">Projected ROI</span>
+                    <span class="stat-number">1</span>
+                    <span class="stat-label">Family</span>
                 </div>
             </div>
         </div>
@@ -486,19 +467,18 @@
             
             <p style="text-align: center; max-width: 900px; margin: 0 auto 60px; line-height: 1.8;">
                 While others celebrate purchased histories and borrowed legacies, Plasencia stands alone—
-                160 years, one family, five active generations still working the fields. This isn't just another
-                anniversary campaign. It's the convergence of the industry's only true multi-generational story
+                160 years, one family, six generations. This is the convergence of a true multi-generational story
                 with the world's most influential premium cigar platform.
             </p>
             
             <div class="partnership-grid">
                 <div class="partnership-card">
-                    <h3>The Alignment</h3>
-                    <p>Cigar Aficionado doesn't just reach cigar enthusiasts—we define the conversation. Our audience doesn't buy cigars; they invest in experiences, collect stories, and celebrate craftsmanship.</p>
+                    <h3>The Audience</h3>
+                    <p>Cigar Aficionado doesn't just reach cigar connoisseurs—we define the conversation. Our audience doesn't buy cigars; they invest in experiences, collect stories, and celebrate craftsmanship.</p>
                 </div>
                 <div class="partnership-card">
-                    <h3>The Moment</h3>
-                    <p>37% market growth since 2020. New consumers can Google your history, verify your claims, and distinguish marketing from mastery. Plasencia offers what money can't manufacture: authenticity.</p>
+                    <h3>The Opportunity</h3>
+                    <p>Today's consumers can verify your claims and distinguish marketing from mastery. Plasencia offers what money can't manufacture: authenticity.</p>
                 </div>
                 <div class="partnership-card">
                     <h3>The Execution</h3>
@@ -510,35 +490,34 @@
                 <h3 style="text-align: center; font-size: 2rem; margin-bottom: 40px;">The Partnership Truth</h3>
                 <div class="truth-grid">
                     <div class="truth-item">
-                        <strong style="color: var(--gold);">Your competitors:</strong>
+                        <strong>Your competitors:</strong>
                         <span>Have marketing budgets</span>
                     </div>
                     <div class="truth-item">
-                        <strong style="color: var(--gold);">You have:</strong>
+                        <strong>You have:</strong>
                         <span>Marketing truth</span>
                     </div>
                     <div class="truth-item">
-                        <strong style="color: var(--gold);">Your competitors:</strong>
+                        <strong>Your competitors:</strong>
                         <span>Have brand stories</span>
                     </div>
                     <div class="truth-item">
-                        <strong style="color: var(--gold);">You have:</strong>
+                        <strong>You have:</strong>
                         <span>Brand evidence</span>
                     </div>
                     <div class="truth-item">
-                        <strong style="color: var(--gold);">Your competitors:</strong>
+                        <strong>Your competitors:</strong>
                         <span>Have heritage claims</span>
                     </div>
                     <div class="truth-item">
-                        <strong style="color: var(--gold);">You have:</strong>
-                        <span>Heritage names—real people, real fields, real mastery</span>
+                        <strong>You have:</strong>
+                        <span>Heritage names</span>
                     </div>
                 </div>
             </div>
             
             <p style="text-align: center; font-size: 1.3rem; margin-top: 60px; color: var(--gold); font-style: italic;">
-                This isn't about choosing an advertising partner.<br>
-                It's about choosing the only platform with the authority, reach, and credibility<br>
+                Partner with the only platform with the authority and credibility<br>
                 to transform your 160-year truth into market dominance.
             </p>
         </div>
@@ -548,22 +527,22 @@
     <section id="strategy" class="strategy">
         <div class="container">
             <div class="section-header">
-                <h2>OMNICHANNEL <span class="gold">EXCELLENCE</span></h2>
+                <h2>CAMPAIGN <span class="gold">STRATEGY</span></h2>
             </div>
             
             <div class="campaign-grid">
                 <div class="campaign-card">
                     <div class="campaign-icon">📖</div>
-                    <h3>Print Authority</h3>
-                    <p>Revolutionary 12-page flip cover in Top 25 Issue. Six issues of sustained presence.</p>
+                    <h3>Print Excellence</h3>
+                    <p>Premium positioning in the world's most respected cigar publication, reaching decision-makers and collectors.</p>
                     <div class="campaign-metrics">
                         <div>
-                            <strong style="font-size: 1.5rem; color: var(--gold);">500K</strong><br>
-                            <small>Reach</small>
+                            <strong style="font-size: 1.5rem; color: var(--gold);">1.4M</strong><br>
+                            <small>Readers</small>
                         </div>
                         <div>
-                            <strong style="font-size: 1.5rem; color: var(--gold);">6X</strong><br>
-                            <small>Frequency</small>
+                            <strong style="font-size: 1.5rem; color: var(--gold);">6</strong><br>
+                            <small>Issues</small>
                         </div>
                     </div>
                 </div>
@@ -587,11 +566,11 @@
                 <div class="campaign-card">
                     <div class="campaign-icon">💫</div>
                     <h3>#160Moments</h3>
-                    <p>Year-long content hub with 160 stories celebrating your heritage.</p>
+                    <p>Content hub showcasing 160 unique brand moments and heritage highlights.</p>
                     <div class="campaign-metrics">
                         <div>
                             <strong style="font-size: 1.5rem; color: var(--gold);">160</strong><br>
-                            <small>Stories</small>
+                            <small>Moments</small>
                         </div>
                         <div>
                             <strong style="font-size: 1.5rem; color: var(--gold);">365</strong><br>
@@ -603,15 +582,15 @@
                 <div class="campaign-card">
                     <div class="campaign-icon">🥂</div>
                     <h3>Big Smoke VIP</h3>
-                    <p>Exclusive sponsorship connecting with 300+ ultra-premium consumers.</p>
+                    <p>Exclusive sponsorship connecting with 300 ultra-premium consumers.</p>
                     <div class="campaign-metrics">
                         <div>
                             <strong style="font-size: 1.5rem; color: var(--gold);">300</strong><br>
                             <small>VIPs</small>
                         </div>
                         <div>
-                            <strong style="font-size: 1.5rem; color: var(--gold);">$250K+</strong><br>
-                            <small>Avg HHI</small>
+                            <strong style="font-size: 1.5rem; color: var(--gold);">1</strong><br>
+                            <small>Night</small>
                         </div>
                     </div>
                 </div>
@@ -619,7 +598,7 @@
                 <div class="campaign-card">
                     <div class="campaign-icon">📧</div>
                     <h3>Email Excellence</h3>
-                    <p>Direct access to verified enthusiasts with personalized nurture sequences.</p>
+                    <p>Direct access to verified collectors with personalized nurture sequences.</p>
                     <div class="campaign-metrics">
                         <div>
                             <strong style="font-size: 1.5rem; color: var(--gold);">250K</strong><br>
@@ -628,22 +607,6 @@
                         <div>
                             <strong style="font-size: 1.5rem; color: var(--gold);">35%</strong><br>
                             <small>Open Rate</small>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="campaign-card">
-                    <div class="campaign-icon">🎬</div>
-                    <h3>Content Studio</h3>
-                    <p>Professional video production, podcast integration, celebrity ambassadors.</p>
-                    <div class="campaign-metrics">
-                        <div>
-                            <strong style="font-size: 1.5rem; color: var(--gold);">50</strong><br>
-                            <small>Videos</small>
-                        </div>
-                        <div>
-                            <strong style="font-size: 1.5rem; color: var(--gold);">1M</strong><br>
-                            <small>Views</small>
                         </div>
                     </div>
                 </div>
@@ -667,7 +630,7 @@
                     <div class="package-body">
                         <ul class="package-features">
                             <li>6 Premium spreads across all 2026 issues</li>
-                            <li>1-month sponsored digital content hub</li>
+                            <li>3-month sponsored content landing page</li>
                             <li>5M programmatic impressions</li>
                             <li>Big Smoke VIP sponsorship</li>
                             <li>2 dedicated email campaigns</li>
@@ -685,15 +648,12 @@
                     </div>
                     <div class="package-body">
                         <ul class="package-features">
-                            <li>Revolutionary 12-page flip cover in Top 25 Issue</li>
+                            <li>Revolutionary 12-page flip cover in Jan/Feb Top 25 Issue</li>
                             <li>Full pages in 5 additional issues</li>
-                            <li>3-month #160Moments digital hub</li>
+                            <li>6-month #160Moments digital hub with sponsored content</li>
                             <li>10M+ programmatic impressions</li>
-                            <li>Complete video production suite</li>
-                            <li>Celebrity ambassador program</li>
-                            <li>Custom NYC VIP event (50 guests)</li>
                             <li>$15K social media budget</li>
-                            <li>CRM integration & data capture</li>
+                            <li>Performance analytics dashboard</li>
                             <li>$100K+ added value</li>
                         </ul>
                     </div>
@@ -702,54 +662,13 @@
         </div>
     </section>
     
-    <!-- ROI -->
-    <section class="roi">
-        <div class="container">
-            <div class="section-header">
-                <h2>MEASURABLE <span class="gold">IMPACT</span></h2>
-            </div>
-            
-            <div class="roi-grid">
-                <div class="roi-card">
-                    <div class="roi-number">15M+</div>
-                    <div class="roi-label">Total Reach</div>
-                </div>
-                <div class="roi-card">
-                    <div class="roi-number">500K</div>
-                    <div class="roi-label">Qualified Audience</div>
-                </div>
-                <div class="roi-card">
-                    <div class="roi-number">50K</div>
-                    <div class="roi-label">Data Captures</div>
-                </div>
-                <div class="roi-card">
-                    <div class="roi-number">3.2X</div>
-                    <div class="roi-label">Projected ROI</div>
-                </div>
-                <div class="roi-card">
-                    <div class="roi-number">85%</div>
-                    <div class="roi-label">Brand Lift</div>
-                </div>
-                <div class="roi-card">
-                    <div class="roi-number">$18M</div>
-                    <div class="roi-label">Media Value</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
     <!-- CTA -->
     <section id="contact" class="cta">
         <div class="container">
-            <h2>TRANSFORM HERITAGE INTO MARKET LEADERSHIP</h2>
-            <p style="font-size: 1.2rem; margin: 30px auto; max-width: 700px;">
-                The question isn't whether to tell your story.<br>
-                It's whether you're ready to own the entire conversation.
-            </p>
+            <h2>LET'S BUILD YOUR LEGACY CAMPAIGN</h2>
             
             <div style="margin: 40px 0;">
-                <a href="mailto:jcohen@mshanken.com" class="btn btn-primary">Schedule Strategy Session</a>
-                <a href="#" class="btn btn-secondary">Download Proposal</a>
+                <a href="mailto:jcohen@mshanken.com" class="btn btn-primary">Contact Jake Cohen</a>
             </div>
             
             <div class="contact-info">

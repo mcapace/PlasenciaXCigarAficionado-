@@ -15,53 +15,35 @@
         }
         
         :root {
-            --gold: #F4D03F;
-            --rose-gold: #E8B4B8;
-            --champagne: #FBF3E4;
-            --pearl: #FFFDF7;
-            --warm-grey: #6B6B6B;
+            --gold: #D4AF37;
+            --light-gold: #F4D03F;
+            --cream: #FFF8F0;
+            --charcoal: #2C2C2C;
+            --grey: #6B6B6B;
         }
         
         body {
             font-family: 'Poppins', sans-serif;
-            font-weight: 300;
-            color: var(--warm-grey);
-            background: linear-gradient(180deg, #FFFFFF 0%, #FFF9F0 100%);
+            color: var(--charcoal);
+            background: white;
             overflow-x: hidden;
-        }
-        
-        h1 {
-            font-family: 'Bodoni Moda', serif;
-            font-weight: 700;
-            font-style: italic;
-        }
-        
-        h2 {
-            font-family: 'Bebas Neue', cursive;
-            letter-spacing: 3px;
-        }
-        
-        h3 {
-            font-family: 'Crimson Text', serif;
-            font-style: italic;
-            font-weight: 600;
+            line-height: 1.6;
         }
         
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 40px;
         }
         
         /* Navigation */
         .nav {
             position: fixed;
             width: 100%;
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(20px);
-            box-shadow: 0 1px 20px rgba(0,0,0,0.05);
+            background: white;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
             z-index: 1000;
-            padding: 25px 0;
+            padding: 20px 0;
         }
         
         .nav-content {
@@ -71,7 +53,7 @@
         }
         
         .nav-logo {
-            height: 45px;
+            height: 50px;
         }
         
         .nav-links {
@@ -81,189 +63,84 @@
         }
         
         .nav-links a {
-            color: var(--warm-grey);
+            color: var(--charcoal);
             text-decoration: none;
-            font-weight: 400;
+            font-weight: 500;
+            text-transform: uppercase;
             font-size: 0.9rem;
             letter-spacing: 2px;
-            transition: all 0.3s;
-            font-family: 'Bebas Neue', cursive;
+            transition: color 0.3s;
         }
         
         .nav-links a:hover {
             color: var(--gold);
-            transform: translateY(-2px);
         }
         
-        /* Hero */
+        /* Hero Section */
         .hero {
             height: 100vh;
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
+            background: var(--cream);
         }
         
         .hero-video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
-            object-fit: cover;
-            opacity: 0.4;
-        }
-        
-        .hero-overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, 
-                rgba(251, 243, 228, 0.9) 0%, 
-                rgba(255, 255, 255, 0.7) 50%, 
-                rgba(244, 208, 63, 0.1) 100%);
-            z-index: 2;
+            object-fit: cover;
+            opacity: 0.3;
         }
         
         .hero-content {
             position: relative;
-            z-index: 3;
+            z-index: 2;
             text-align: center;
             max-width: 1000px;
+            padding: 0 40px;
         }
         
         .hero-badge {
             display: inline-block;
-            padding: 15px 45px;
-            background: rgba(255,255,255,0.9);
-            border: 1px solid var(--gold);
+            padding: 12px 40px;
+            border: 2px solid var(--gold);
             margin-bottom: 40px;
-            font-family: 'Bebas Neue', cursive;
-            letter-spacing: 4px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
             font-size: 0.9rem;
-            color: var(--warm-grey);
         }
         
-        .hero h1 {
-            font-size: clamp(4rem, 8vw, 7rem);
-            color: transparent;
-            background: linear-gradient(135deg, var(--warm-grey) 0%, var(--gold) 50%, var(--rose-gold) 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            margin-bottom: 30px;
-            line-height: 0.95;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.6rem;
-            color: var(--warm-grey);
-            margin-bottom: 60px;
-            font-family: 'Crimson Text', serif;
-            font-style: italic;
+        h1 {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 5rem;
+            margin-bottom: 20px;
             font-weight: 400;
-            opacity: 0.9;
+            line-height: 1;
         }
         
-        /* Marketing Opener Section */
-        .marketing-opener {
-            padding: 120px 0;
-            background: white;
-        }
-        
-        .opener-content {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .opener-content h2 {
-            font-size: 3.5rem;
-            margin-bottom: 40px;
-            color: var(--warm-grey);
-        }
-        
-        .opener-content h2 .gold {
+        h1 .gold {
             color: var(--gold);
-        }
-        
-        .opener-lead {
-            font-size: 1.8rem;
-            font-family: 'Crimson Text', serif;
             font-style: italic;
-            color: var(--warm-grey);
+        }
+        
+        h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
             margin-bottom: 40px;
-            line-height: 1.4;
-        }
-        
-        .opener-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 40px;
-            margin: 60px 0;
-            text-align: left;
-        }
-        
-        .opener-point {
-            padding: 30px;
-            background: var(--pearl);
-            border-left: 3px solid var(--gold);
-        }
-        
-        .opener-point h3 {
-            color: var(--gold);
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-        
-        .opener-point p {
-            line-height: 1.8;
-            color: var(--warm-grey);
-        }
-        
-        .truth-section {
-            background: linear-gradient(135deg, var(--champagne), white);
-            padding: 60px;
-            margin: 60px 0;
-            border-radius: 0;
-        }
-        
-        .truth-section h3 {
-            font-size: 2.5rem;
-            color: var(--warm-grey);
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        
-        .truth-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-top: 40px;
-        }
-        
-        .truth-item {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        
-        .truth-item strong {
-            color: var(--gold);
-            font-size: 1.2rem;
-            flex-shrink: 0;
+            letter-spacing: 2px;
         }
         
         /* Stats */
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 50px;
-            margin-top: 80px;
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            margin-top: 60px;
         }
         
         .stat {
@@ -271,28 +148,27 @@
         }
         
         .stat-number {
-            font-size: 3.5rem;
-            font-family: 'Bodoni Moda', serif;
+            font-size: 3rem;
+            color: var(--gold);
             font-weight: 700;
-            background: linear-gradient(180deg, var(--gold), var(--rose-gold));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
             display: block;
         }
         
         .stat-label {
-            font-size: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--warm-grey);
+            letter-spacing: 2px;
+            font-size: 0.8rem;
             margin-top: 10px;
-            font-family: 'Bebas Neue', cursive;
         }
         
         /* Sections */
         section {
-            padding: 120px 0;
+            padding: 100px 0;
+        }
+        
+        /* Partnership Section */
+        .partnership {
+            background: white;
         }
         
         .section-header {
@@ -301,33 +177,251 @@
         }
         
         .section-header h2 {
-            font-size: 4rem;
-            color: var(--warm-grey);
-            margin-bottom: 20px;
-            text-transform: uppercase;
+            color: var(--charcoal);
         }
         
         .section-header h2 .gold {
             color: var(--gold);
         }
         
-        .section-header p {
+        .partnership-intro {
             font-size: 1.3rem;
-            color: var(--warm-grey);
-            max-width: 800px;
-            margin: 0 auto;
-            font-family: 'Crimson Text', serif;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 60px;
             font-style: italic;
-            opacity: 0.8;
-            line-height: 1.8;
+            color: var(--grey);
         }
         
-        /* All other styles continue as in previous version... */
+        .partnership-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+        
+        .partnership-card {
+            padding: 40px;
+            background: var(--cream);
+            text-align: center;
+        }
+        
+        .partnership-card h3 {
+            color: var(--gold);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        
+        /* Truth Section */
+        .truth-section {
+            background: var(--cream);
+            padding: 60px;
+            margin: 60px 0;
+        }
+        
+        .truth-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .truth-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        /* Campaign Strategy */
+        .campaign-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        
+        .campaign-card {
+            background: white;
+            border: 1px solid var(--gold);
+            padding: 40px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .campaign-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .campaign-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .campaign-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .campaign-metrics {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        /* Packages */
+        .packages {
+            background: var(--cream);
+        }
+        
+        .packages-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .package-card {
+            background: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .package-header {
+            background: var(--charcoal);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .package-price {
+            font-size: 3rem;
+            color: var(--gold);
+            font-weight: 700;
+        }
+        
+        .package-body {
+            padding: 40px;
+        }
+        
+        .package-features {
+            list-style: none;
+        }
+        
+        .package-features li {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .package-features li:before {
+            content: "✓ ";
+            color: var(--gold);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .featured {
+            border: 3px solid var(--gold);
+            position: relative;
+        }
+        
+        .featured-badge {
+            position: absolute;
+            top: -15px;
+            right: 40px;
+            background: var(--gold);
+            color: white;
+            padding: 5px 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+        
+        /* ROI */
+        .roi-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 30px;
+        }
+        
+        .roi-card {
+            text-align: center;
+            padding: 30px 20px;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        
+        .roi-number {
+            font-size: 2.5rem;
+            color: var(--gold);
+            font-weight: 700;
+        }
+        
+        .roi-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+        
+        /* CTA */
+        .cta {
+            background: var(--charcoal);
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+        
+        .cta h2 {
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 20px 50px;
+            margin: 10px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: var(--gold);
+            color: white;
+        }
+        
+        .btn-secondary {
+            border: 2px solid var(--gold);
+            color: var(--gold);
+        }
+        
+        .contact-info {
+            margin-top: 60px;
+            font-size: 1.2rem;
+        }
+        
+        .contact-info a {
+            color: var(--gold);
+            text-decoration: none;
+        }
         
         @media (max-width: 768px) {
-            .hero-stats,
-            .opener-grid,
-            .truth-grid {
+            .nav-links {
+                display: none;
+            }
+            
+            .stats,
+            .partnership-grid,
+            .campaign-grid,
+            .packages-grid,
+            .roi-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -339,9 +433,9 @@
         <div class="container nav-content">
             <img src="Plasencia_logo_WHITE.png" alt="Plasencia" class="nav-logo">
             <ul class="nav-links">
-                <li><a href="#opener">Partnership</a></li>
+                <li><a href="#partnership">Partnership</a></li>
                 <li><a href="#strategy">Strategy</a></li>
-                <li><a href="#packages">Investment</a></li>
+                <li><a href="#investment">Investment</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <img src="CA_logo_WHITE.png" alt="Cigar Aficionado" class="nav-logo">
@@ -353,13 +447,12 @@
         <video autoplay muted loop playsinline class="hero-video">
             <source src="Girl.mp4" type="video/mp4">
         </video>
-        <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="hero-badge">Cigar Aficionado × Plasencia 1865</div>
-            <h1>160 Years of<br>Unbroken Legacy</h1>
-            <p class="hero-subtitle">Six Generations. One Family. One Extraordinary Story.</p>
+            <h1>160 Years of<br><span class="gold">Unbroken Legacy</span></h1>
+            <p style="font-size: 1.5rem; margin: 30px 0; font-style: italic;">Six Generations. One Family. One Extraordinary Story.</p>
             
-            <div class="hero-stats">
+            <div class="stats">
                 <div class="stat">
                     <span class="stat-number">1865</span>
                     <span class="stat-label">Established</span>
@@ -369,7 +462,7 @@
                     <span class="stat-label">Reader Purchases</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number">15M+</span>
+                    <span class="stat-number">15M</span>
                     <span class="stat-label">Total Reach</span>
                 </div>
                 <div class="stat">
@@ -380,77 +473,293 @@
         </div>
     </section>
     
-    <!-- Marketing Opener -->
-    <section id="opener" class="marketing-opener">
+    <!-- Partnership -->
+    <section id="partnership" class="partnership">
         <div class="container">
-            <div class="opener-content">
-                <h2>Why <span class="gold">Cigar Aficionado × Plasencia</span></h2>
-                <p class="opener-lead">
-                    In luxury marketing, heritage is claimed. With Plasencia, it's proven.
-                </p>
-                
-                <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 60px; color: var(--warm-grey);">
-                    While others celebrate purchased histories and borrowed legacies, Plasencia stands alone—160 years, 
-                    one family, five active generations still working the fields. This isn't just another anniversary campaign. 
-                    It's the convergence of the industry's only true multi-generational story with the world's most 
-                    influential premium cigar platform.
-                </p>
-                
-                <div class="opener-grid">
-                    <div class="opener-point">
-                        <h3>The Alignment</h3>
-                        <p>Cigar Aficionado doesn't just reach cigar enthusiasts—we define the conversation. Our audience doesn't buy cigars; they invest in experiences, collect stories, and celebrate craftsmanship.</p>
+            <div class="section-header">
+                <h2>WHY <span class="gold">CIGAR AFICIONADO × PLASENCIA</span></h2>
+            </div>
+            
+            <p class="partnership-intro">
+                In luxury marketing, heritage is claimed. With Plasencia, it's proven.
+            </p>
+            
+            <p style="text-align: center; max-width: 900px; margin: 0 auto 60px; line-height: 1.8;">
+                While others celebrate purchased histories and borrowed legacies, Plasencia stands alone—
+                160 years, one family, five active generations still working the fields. This isn't just another
+                anniversary campaign. It's the convergence of the industry's only true multi-generational story
+                with the world's most influential premium cigar platform.
+            </p>
+            
+            <div class="partnership-grid">
+                <div class="partnership-card">
+                    <h3>The Alignment</h3>
+                    <p>Cigar Aficionado doesn't just reach cigar enthusiasts—we define the conversation. Our audience doesn't buy cigars; they invest in experiences, collect stories, and celebrate craftsmanship.</p>
+                </div>
+                <div class="partnership-card">
+                    <h3>The Moment</h3>
+                    <p>37% market growth since 2020. New consumers can Google your history, verify your claims, and distinguish marketing from mastery. Plasencia offers what money can't manufacture: authenticity.</p>
+                </div>
+                <div class="partnership-card">
+                    <h3>The Execution</h3>
+                    <p>We don't just sell advertising. We craft market leadership. Every dollar traceable. Every impression measurable. Every story authentic.</p>
+                </div>
+            </div>
+            
+            <div class="truth-section">
+                <h3 style="text-align: center; font-size: 2rem; margin-bottom: 40px;">The Partnership Truth</h3>
+                <div class="truth-grid">
+                    <div class="truth-item">
+                        <strong style="color: var(--gold);">Your competitors:</strong>
+                        <span>Have marketing budgets</span>
                     </div>
-                    <div class="opener-point">
-                        <h3>The Moment</h3>
-                        <p>37% market growth since 2020. New consumers can Google your history, verify your claims, and distinguish marketing from mastery. Plasencia offers what money can't manufacture: authenticity.</p>
+                    <div class="truth-item">
+                        <strong style="color: var(--gold);">You have:</strong>
+                        <span>Marketing truth</span>
                     </div>
-                    <div class="opener-point">
-                        <h3>The Execution</h3>
-                        <p>We don't just sell advertising. We craft market leadership. Every dollar traceable. Every impression measurable. Every story authentic.</p>
+                    <div class="truth-item">
+                        <strong style="color: var(--gold);">Your competitors:</strong>
+                        <span>Have brand stories</span>
+                    </div>
+                    <div class="truth-item">
+                        <strong style="color: var(--gold);">You have:</strong>
+                        <span>Brand evidence</span>
+                    </div>
+                    <div class="truth-item">
+                        <strong style="color: var(--gold);">Your competitors:</strong>
+                        <span>Have heritage claims</span>
+                    </div>
+                    <div class="truth-item">
+                        <strong style="color: var(--gold);">You have:</strong>
+                        <span>Heritage names—real people, real fields, real mastery</span>
+                    </div>
+                </div>
+            </div>
+            
+            <p style="text-align: center; font-size: 1.3rem; margin-top: 60px; color: var(--gold); font-style: italic;">
+                This isn't about choosing an advertising partner.<br>
+                It's about choosing the only platform with the authority, reach, and credibility<br>
+                to transform your 160-year truth into market dominance.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Strategy -->
+    <section id="strategy" class="strategy">
+        <div class="container">
+            <div class="section-header">
+                <h2>OMNICHANNEL <span class="gold">EXCELLENCE</span></h2>
+            </div>
+            
+            <div class="campaign-grid">
+                <div class="campaign-card">
+                    <div class="campaign-icon">📖</div>
+                    <h3>Print Authority</h3>
+                    <p>Revolutionary 12-page flip cover in Top 25 Issue. Six issues of sustained presence.</p>
+                    <div class="campaign-metrics">
+                        <div>
+                            <strong style="font-size: 1.5rem; color: var(--gold);">500K</strong><br>
+                            <small>Reach</small>
+                        </div>
+                        <div>
+                            <strong style="font-size: 1.5rem; color: var(--gold);">6X</strong><br>
+                            <small>Frequency</small>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="truth-section">
-                    <h3>The Partnership Truth</h3>
-                    <div class="truth-grid">
-                        <div class="truth-item">
-                            <strong>Your competitors:</strong>
-                            <span>Have marketing budgets</span>
+                <div class="campaign-card">
+                    <div class="campaign-icon">🎯</div>
+                    <h3>Digital Precision</h3>
+                    <p>Programmatic excellence with first-party data activation and sequential storytelling.</p>
+                    <div class="campaign-metrics">
+                        <div>
+                            <strong style="font-size: 1.5rem; color: var(--gold);">10M</strong><br>
+                            <small>Impressions</small>
                         </div>
-                        <div class="truth-item">
-                            <strong>You have:</strong>
-                            <span>Marketing truth</span>
-                        </div>
-                        <div class="truth-item">
-                            <strong>Your competitors:</strong>
-                            <span>Have brand stories</span>
-                        </div>
-                        <div class="truth-item">
-                            <strong>You have:</strong>
-                            <span>Brand evidence</span>
-                        </div>
-                        <div class="truth-item">
-                            <strong>Your competitors:</strong>
-                            <span>Have heritage claims</span>
-                        </div>
-                        <div class="truth-item">
-                            <strong>You have:</strong>
-                            <span>Heritage names—real people, real fields, real mastery</span>
+                        <div>
+                            <strong style="font-size: 1.5rem; color: var(--gold);">2.5%</strong><br>
+                            <small>CTR</small>
                         </div>
                     </div>
                 </div>
                 
-                <p style="font-size: 1.4rem; margin-top: 60px; font-family: 'Crimson Text', serif; font-style: italic; color: var(--gold);">
-                    This isn't about choosing an advertising partner.<br>
-                    It's about choosing the only platform with the authority, reach, and credibility<br>
-                    to transform your 160-year truth into market dominance.
-                </p>
+                <div class="campaign-card">
+                    <div class="campaign-icon">💫</div>
+                    <h3>#160Moments</h3>
+                    <p>Year-long content hub with 160 stories celebrating your heritage.</p>
+                    <div class="campaign-metrics">
+                        <div>
+                            <strong style="font-size: 1.5rem; color: var(--gold);">160</strong><br>
+                            <small>Stories</small>
+                        </div>
+                        <div>
+                            <strong style="font-size: 1.5rem; color: var(--gold);">365</strong><br>
+                            <small>Days</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="campaign-card">
+                    <div class="campaign-icon">🥂</div>
+                    <h3>Big Smoke VIP</h3>
+                    <p>Exclusive sponsorship connecting with 300+ ultra-premium consumers.</p>
+                    <div class="campaign-metrics">
+                        <div>
+                            <strong style="font-size: 1.5rem; color: var(--gold);">300</strong><br>
+                            <small>VIPs</small>
+                        </div>
+                        <div>
+                            <strong style="font-size: 1.5rem; color: var(--gold);">$250K+</strong><br>
+                            <small>Avg HHI</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="campaign-card">
+                    <div class="campaign-icon">📧</div>
+                    <h3>Email Excellence</h3>
+                    <p>Direct access to verified enthusiasts with personalized nurture sequences.</p>
+                    <div class="campaign-metrics">
+                        <div>
+                            <strong style="font-size: 1.5rem; color: var(--gold);">250K</strong><br>
+                            <small>Database</small>
+                        </div>
+                        <div>
+                            <strong style="font-size: 1.5rem; color: var(--gold);">35%</strong><br>
+                            <small>Open Rate</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="campaign-card">
+                    <div class="campaign-icon">🎬</div>
+                    <h3>Content Studio</h3>
+                    <p>Professional video production, podcast integration, celebrity ambassadors.</p>
+                    <div class="campaign-metrics">
+                        <div>
+                            <strong style="font-size: 1.5rem; color: var(--gold);">50</strong><br>
+                            <small>Videos</small>
+                        </div>
+                        <div>
+                            <strong style="font-size: 1.5rem; color: var(--gold);">1M</strong><br>
+                            <small>Views</small>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     
-    <!-- Rest of content continues with Strategy, Packages, ROI, CTA sections as in previous version -->
+    <!-- Investment Packages -->
+    <section id="investment" class="packages">
+        <div class="container">
+            <div class="section-header">
+                <h2>INVESTMENT <span class="gold">OPTIONS</span></h2>
+            </div>
+            
+            <div class="packages-grid">
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 15px;">SELECT PACKAGE</h3>
+                        <div class="package-price">$357,400</div>
+                    </div>
+                    <div class="package-body">
+                        <ul class="package-features">
+                            <li>6 Premium spreads across all 2026 issues</li>
+                            <li>1-month sponsored digital content hub</li>
+                            <li>5M programmatic impressions</li>
+                            <li>Big Smoke VIP sponsorship</li>
+                            <li>2 dedicated email campaigns</li>
+                            <li>Performance analytics dashboard</li>
+                            <li>$50K added value</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="package-card featured">
+                    <span class="featured-badge">RECOMMENDED</span>
+                    <div class="package-header">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 15px;">SIGNATURE PACKAGE</h3>
+                        <div class="package-price">$535,900+</div>
+                    </div>
+                    <div class="package-body">
+                        <ul class="package-features">
+                            <li>Revolutionary 12-page flip cover in Top 25 Issue</li>
+                            <li>Full pages in 5 additional issues</li>
+                            <li>3-month #160Moments digital hub</li>
+                            <li>10M+ programmatic impressions</li>
+                            <li>Complete video production suite</li>
+                            <li>Celebrity ambassador program</li>
+                            <li>Custom NYC VIP event (50 guests)</li>
+                            <li>$15K social media budget</li>
+                            <li>CRM integration & data capture</li>
+                            <li>$100K+ added value</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
+    <!-- ROI -->
+    <section class="roi">
+        <div class="container">
+            <div class="section-header">
+                <h2>MEASURABLE <span class="gold">IMPACT</span></h2>
+            </div>
+            
+            <div class="roi-grid">
+                <div class="roi-card">
+                    <div class="roi-number">15M+</div>
+                    <div class="roi-label">Total Reach</div>
+                </div>
+                <div class="roi-card">
+                    <div class="roi-number">500K</div>
+                    <div class="roi-label">Qualified Audience</div>
+                </div>
+                <div class="roi-card">
+                    <div class="roi-number">50K</div>
+                    <div class="roi-label">Data Captures</div>
+                </div>
+                <div class="roi-card">
+                    <div class="roi-number">3.2X</div>
+                    <div class="roi-label">Projected ROI</div>
+                </div>
+                <div class="roi-card">
+                    <div class="roi-number">85%</div>
+                    <div class="roi-label">Brand Lift</div>
+                </div>
+                <div class="roi-card">
+                    <div class="roi-number">$18M</div>
+                    <div class="roi-label">Media Value</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA -->
+    <section id="contact" class="cta">
+        <div class="container">
+            <h2>TRANSFORM HERITAGE INTO MARKET LEADERSHIP</h2>
+            <p style="font-size: 1.2rem; margin: 30px auto; max-width: 700px;">
+                The question isn't whether to tell your story.<br>
+                It's whether you're ready to own the entire conversation.
+            </p>
+            
+            <div style="margin: 40px 0;">
+                <a href="mailto:jcohen@mshanken.com" class="btn btn-primary">Schedule Strategy Session</a>
+                <a href="#" class="btn btn-secondary">Download Proposal</a>
+            </div>
+            
+            <div class="contact-info">
+                <h3 style="color: var(--gold); margin-bottom: 20px;">Jake Cohen</h3>
+                <p>Tobacco Account Executive<br>
+                M. Shanken Communications<br>
+                <a href="tel:203-561-3977">203.561.3977</a> | 
+                <a href="mailto:jcohen@mshanken.com">jcohen@mshanken.com</a></p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

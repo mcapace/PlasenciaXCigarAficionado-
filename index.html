@@ -63,7 +63,6 @@
     .hero video{
       position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
       opacity:.24; filter:brightness(.55) contrast(1.05) saturate(.9);
-      mix-blend-mode:normal;
     }
     .hero .content{position:relative; z-index:1; text-align:center; max-width:1100px; padding:0 var(--pad)}
     .badge{
@@ -111,7 +110,9 @@
     }
     .feature-list{list-style:none; margin:0; padding:26px 28px; color:#31343A}
     .feature-list li{padding:10px 0; border-bottom:1px solid rgba(0,0,0,.06)}
+    .feature-list li:last-child{border-bottom:none}
     .feature-list li strong{color:var(--gold)}
+    .subbullets{margin:8px 0 0 18px; line-height:1.7; list-style:disc}
 
     /* Program (“second page”) */
     #program{background:linear-gradient(180deg,#fff 0,#fff 40%,#FBFBFC 100%)}
@@ -190,7 +191,7 @@
           <p class="muted">Today’s buyer verifies claims. Plasencia brings what money can’t manufacture: authenticity and provenance, documented across generations.</p>
         </div>
         <div class="card card--tone">
-          <h3 class="mt-12">Advertorial Craft</h3>
+          <h3 class="mt-12">Advertorial Craft — Editorial Standards</h3>
           <p class="muted">Brand storytelling produced to editorial standards. Clearly labeled, impeccably designed—so proof reads with the authority of the platform.</p>
         </div>
       </div>
@@ -198,7 +199,7 @@
       <div class="grid-2 mt-36">
         <div class="card">
           <h3>Authenticity</h3>
-          <p class="muted">Real family, real mastery, and practices preserved over time—evidence that builds trust at the very first touch.</p>
+          <p class="muted">Real family, real mastery, and methods preserved over time—evidence that builds trust from the very first touch.</p>
         </div>
         <div class="card">
           <h3>Authority</h3>
@@ -224,15 +225,13 @@
         <div class="card campaign-card">
           <h3 class="mt-12">Digital Precision</h3>
           <p class="muted">Landing hub, native brand extension, paid social, newsletters, and dedicated email—sequenced to build desire and intent.</p>
-          <!-- Impressions line removed per request -->
+          <!-- per your request: no impressions line here -->
         </div>
         <div class="card campaign-card">
           <h3 class="mt-12">Big Smoke Access</h3>
           <p class="muted">All-Access presence placing the Plasencia family in conversation with high-value buyers and retailers.</p>
         </div>
       </div>
-
-      <!-- Removed the Cigar Watch Newsletter / Dedicated Email boxes -->
     </div>
   </section>
 
@@ -252,19 +251,29 @@
             <div class="price">$361,184</div>
           </div>
           <ul class="feature-list">
-            <li><strong>Print:</strong> <span>Six (6) premium spreads across 2026 issues</span> — <strong>$310,800</strong></li>
-            <li><strong>Digital (3 mo):</strong> <strong>$40,384</strong></li>
-            <li style="border-bottom:none; padding-top:6px">
-              <em class="muted">Digital components include:</em>
-              <ul class="muted" style="margin:8px 0 0 18px; line-height:1.7; list-style:disc">
-                <li>Brand landing hub + native brand extension</li>
-                <li>Paid social sequencing and retargeting</li>
-                <li>Cigar Watch newsletter insertions</li>
-                <li>Dedicated email outreach</li>
+            <li><strong>Print:</strong> Six (6) premium spreads across 2026 issues — <strong>$310,800</strong></li>
+            <li><strong>Digital (3 months):</strong> <strong>$40,384</strong></li>
+            <li>
+              <em class="muted">Digital plan (outline):</em>
+              <ul class="subbullets muted">
+                <li>Landing hub (3 months)</li>
+                <li>Native extension — 232,000 impressions</li>
+                <li>Instagram: 1 post, 1 story — 326K community</li>
+                <li>Paid social — 278,000 impressions</li>
+                <li>Cigar Watch newsletter — 1× (160K subscribers)</li>
+                <li>Dedicated emails — 2× (100K subscribers)</li>
               </ul>
             </li>
             <li><strong>Big Smoke All-Access:</strong> $10,000</li>
-            <li><strong>Added Value (in addition to the program above):</strong> 1× IG Post, 1× IG Story, 1× Print Page, no 2026 page-rate increase</li>
+            <li>
+              <strong>Added Value (in addition to the program):</strong>
+              <ul class="subbullets muted">
+                <li>1× Instagram post</li>
+                <li>1× Instagram story</li>
+                <li>1× additional print page</li>
+                <li>No page-rate increase in 2026</li>
+              </ul>
+            </li>
           </ul>
         </div>
 
@@ -276,25 +285,34 @@
             <div class="price">$537,094</div>
           </div>
           <ul class="feature-list">
-            <li><strong>Print:</strong> <span>12-page back-cover flip + 5 full pages</span> — <strong>$452,300</strong></li>
-            <li><strong>Digital (6 mo):</strong> <strong>$74,794</strong></li>
-            <li style="border-bottom:none; padding-top:6px">
-              <em class="muted">Digital components include:</em>
-              <ul class="muted" style="margin:8px 0 0 18px; line-height:1.7; list-style:disc">
-                <li>Brand landing hub + elevated native brand extension</li>
-                <li>Paid social: prospecting → consideration → retargeting flow</li>
-                <li>Cigar Watch newsletter insertions</li>
-                <li>Dedicated email series</li>
-                <li>#160Moments content stream (extended)</li>
+            <li><strong>Print:</strong> 12-page back-cover flip + 5 full pages — <strong>$452,300</strong></li>
+            <li><strong>Digital (6 months):</strong> <strong>$74,794</strong></li>
+            <li>
+              <em class="muted">Digital plan (outline):</em>
+              <ul class="subbullets muted">
+                <li>Landing hub (6 months)</li>
+                <li>Article + homepage placement</li>
+                <li>Native extension — 465,000 impressions</li>
+                <li>Instagram: 2 posts, 2 stories — 326K community</li>
+                <li>Paid social — 555,880 impressions</li>
+                <li>Cigar Watch newsletter — 2× (320K subscribers)</li>
+                <li>Dedicated emails — 3× (150K subscribers)</li>
               </ul>
             </li>
             <li><strong>Big Smoke All-Access:</strong> $10,000</li>
-            <li><strong>Added Value (in addition to the program above):</strong> 1× IG Post, 1× IG Story, 1× Cigar Watch, 2× Print Pages, no 2026 page-rate increase</li>
+            <li>
+              <strong>Added Value (in addition to the program):</strong>
+              <ul class="subbullets muted">
+                <li>1× Instagram post</li>
+                <li>1× Instagram story</li>
+                <li>1× Cigar Watch placement</li>
+                <li>2× additional print pages</li>
+                <li>No page-rate increase in 2026</li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
-
-      <p class="muted center mt-20">Totals reflect your approved pricing; digital is shown as aggregate investment only.</p>
     </div>
   </section>
 
@@ -303,22 +321,22 @@
     <div class="container">
       <div class="section-header">
         <h2>The Engine: Print Command. Digital Momentum. A Hub That Converts.</h2>
-        <p class="lede center">We don’t run ads—we stage proof. The back-cover flip becomes the collectible centerpiece; digital surrounds the reader until interest turns into action; the hub ties every chapter together.</p>
+        <p class="lede center">We don’t run ads—we stage proof. The back-cover flip is the collectible centerpiece; digital surrounds decision-makers until interest becomes action; the hub ties every chapter together.</p>
         <div class="gold-rule"></div>
       </div>
 
       <div class="grid-3">
         <div class="card">
           <h3>The Back-Cover Flip (12 pages)</h3>
-          <p class="muted">A branded, clearly labeled mini-issue produced to editorial standards. The flip opens from the back—immediately signaling rarity. Each turn deepens belief: origin, process, signatures, invitation. It looks like it belongs on a coffee table—and that’s the point: **longer life, greater influence, repeated reads.**</p>
+          <p class="muted">A branded, clearly labeled mini-issue produced to editorial standards. Opening from the back signals rarity. Each turn advances belief: origin, process, signatures, invitation. It’s designed to be kept—longer life, greater influence, repeated reads.</p>
         </div>
         <div class="card">
           <h3>The Print System</h3>
-          <p class="muted">Spreads and full pages are staged across tentpoles so momentum never drops. The magazine setting confers status; the pacing delivers recall. Buyers don’t just see Plasencia—they carry the story issue to issue.</p>
+          <p class="muted">Spreads and full pages are staged across tentpoles so momentum never drops. The magazine setting confers status; consistent pacing delivers recall. Plasencia isn’t just seen—it’s remembered.</p>
         </div>
         <div class="card">
           <h3>The Digital System</h3>
-          <p class="muted">A single, elegant hub houses every proof point. Native placements and social sequencing direct qualified readers and buyers to it, then retargeting brings them back until they act. **Same story, multiple doors in.**</p>
+          <p class="muted">A single, elegant hub houses every proof point. Native placements and social sequencing direct qualified readers and buyers to it, then retargeting brings them back until they act. One story—many doors in.</p>
         </div>
       </div>
 
@@ -334,18 +352,22 @@
         </div>
         <div class="card">
           <h3>Why It Wins</h3>
-          <p class="muted"><strong>Authority transfers.</strong> When the story appears here, retailers and buyers treat it as verified. <strong>Craft persuades.</strong> The design invites lingering—time spent becomes belief. <strong>Consistency compounds.</strong> One narrative, repeated across channels, turns a 160-year history into a modern buying signal.</p>
+          <ul class="subbullets muted" style="list-style:disc">
+            <li>Authority transfers: when the story appears here, retailers and buyers treat it as verified.</li>
+            <li>Craft persuades: the design invites lingering—time spent becomes belief.</li>
+            <li>Consistency compounds: one narrative, repeated across channels, turns a 160-year history into a modern buying signal.</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA (no buttons) -->
+  <!-- CTA -->
   <section id="contact" class="cta">
     <div class="container">
       <h2>Let’s Build Your Legacy Campaign</h2>
       <div class="contact">
-        <p><strong>Jake Cohen</strong><br/>Tobacco Account Executive — M. Shanken Communications<br/>
+        <p><strong>Jake Cohen</strong><br/>Account Executive — M. Shanken Communications<br/>
           <a href="tel:203-561-3977">203-561-3977</a> • <a href="mailto:jcohen@mshanken.com">jcohen@mshanken.com</a>
         </p>
       </div>

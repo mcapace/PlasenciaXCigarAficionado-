@@ -1,688 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plasencia 160th Anniversary × Cigar Aficionado</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;1,400;1,600&family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --gold: #D4AF37;
-            --light-gold: #F4D03F;
-            --cream: #FFF8F0;
-            --charcoal: #2C2C2C;
-            --grey: #6B6B6B;
-        }
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: var(--charcoal);
-            background: white;
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
-        
-        /* Navigation */
-        .nav {
-            position: fixed;
-            width: 100%;
-            background: white;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-            z-index: 1000;
-            padding: 20px 0;
-        }
-        
-        .nav-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .nav-logo {
-            height: 50px;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 40px;
-            list-style: none;
-        }
-        
-        .nav-links a {
-            color: var(--charcoal);
-            text-decoration: none;
-            font-weight: 500;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 2px;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: var(--gold);
-        }
-        
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--cream);
-        }
-        
-        .hero-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.3;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            max-width: 1000px;
-            padding: 0 40px;
-        }
-        
-        .hero-badge {
-            display: inline-block;
-            padding: 12px 40px;
-            border: 2px solid var(--gold);
-            margin-bottom: 40px;
-            font-weight: 600;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-        }
-        
-        h1 {
-            font-family: 'Bodoni Moda', serif;
-            font-size: 5rem;
-            margin-bottom: 20px;
-            font-weight: 400;
-            line-height: 1;
-        }
-        
-        h1 .gold {
-            color: var(--gold);
-            font-style: italic;
-        }
-        
-        h2 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 3rem;
-            margin-bottom: 40px;
-            letter-spacing: 2px;
-        }
-        
-        /* Stats */
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 80px;
-            margin-top: 60px;
-        }
-        
-        .stat {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 3rem;
-            color: var(--gold);
-            font-weight: 700;
-            display: block;
-        }
-        
-        .stat-label {
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.8rem;
-            margin-top: 10px;
-        }
-        
-        /* Sections */
-        section {
-            padding: 100px 0;
-        }
-        
-        /* Partnership Section */
-        .partnership {
-            background: white;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 80px;
-        }
-        
-        .section-header h2 {
-            color: var(--charcoal);
-        }
-        
-        .section-header h2 .gold {
-            color: var(--gold);
-        }
-        
-        .partnership-intro {
-            font-size: 1.3rem;
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto 60px;
-            font-style: italic;
-            color: var(--grey);
-        }
-        
-        .partnership-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin-bottom: 80px;
-        }
-        
-        .partnership-card {
-            padding: 40px;
-            background: var(--cream);
-            text-align: center;
-        }
-        
-        .partnership-card h3 {
-            color: var(--gold);
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-        }
-        
-        /* Truth Section */
-        .truth-section {
-            background: var(--cream);
-            padding: 60px;
-            margin: 60px 0;
-        }
-        
-        .truth-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .truth-item {
-            display: flex;
-            gap: 20px;
-            padding: 15px 0;
-            border-bottom: 1px solid rgba(0,0,0,0.1);
-        }
-        
-        .truth-item strong {
-            color: var(--gold);
-            white-space: nowrap;
-        }
-        
-        .truth-item span {
-            flex: 1;
-        }
-        
-        /* Campaign Strategy */
-        .campaign-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-        }
-        
-        .campaign-card {
-            background: white;
-            border: 1px solid var(--gold);
-            padding: 40px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        
-        .campaign-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-        
-        .campaign-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-        
-        .campaign-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-        
-        .campaign-metrics {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(0,0,0,0.1);
-        }
-        
-        /* Packages */
-        .packages {
-            background: var(--cream);
-        }
-        
-        .packages-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .package-card {
-            background: white;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-        }
-        
-        .package-header {
-            background: var(--charcoal);
-            color: white;
-            padding: 40px;
-            text-align: center;
-        }
-        
-        .package-price {
-            font-size: 3rem;
-            color: var(--gold);
-            font-weight: 700;
-        }
-        
-        .package-body {
-            padding: 40px;
-        }
-        
-        .package-features {
-            list-style: none;
-        }
-        
-        .package-features li {
-            padding: 15px 0;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-        
-        .package-features li:before {
-            content: "✓ ";
-            color: var(--gold);
-            font-weight: bold;
-            margin-right: 10px;
-        }
-        
-        .featured {
-            border: 3px solid var(--gold);
-            position: relative;
-        }
-        
-        .featured-badge {
-            position: absolute;
-            top: -15px;
-            right: 40px;
-            background: var(--gold);
-            color: white;
-            padding: 5px 20px;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-        }
-        
-        /* CTA */
-        .cta {
-            background: var(--charcoal);
-            color: white;
-            text-align: center;
-            padding: 100px 0;
-        }
-        
-        .cta h2 {
-            color: white;
-            margin-bottom: 30px;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 20px 50px;
-            margin: 10px;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        
-        .btn-primary {
-            background: var(--gold);
-            color: white;
-        }
-        
-        .btn-secondary {
-            border: 2px solid var(--gold);
-            color: var(--gold);
-        }
-        
-        .contact-info {
-            margin-top: 60px;
-            font-size: 1.2rem;
-        }
-        
-        .contact-info a {
-            color: var(--gold);
-            text-decoration: none;
-        }
-        
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .stats,
-            .partnership-grid,
-            .campaign-grid,
-            .packages-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Plasencia 160th Anniversary × Cigar Aficionado</title>
+  <meta name="theme-color" content="#2C2C2C" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;1,400;1,600&family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    :root{--gold:#D4AF37;--cream:#FFF8F0;--charcoal:#2C2C2C;--grey:#6B6B6B}
+    body{font-family:'Poppins',sans-serif;color:var(--charcoal);background:#fff;line-height:1.6;overflow-x:hidden}
+    .container{max-width:1400px;margin:0 auto;padding:0 40px}
+    /* NAV */
+    .nav{position:fixed;inset:0 0 auto 0;background:rgba(44,44,44,.95);backdrop-filter:saturate(1.2) blur(6px);box-shadow:0 2px 20px rgba(0,0,0,.2);z-index:1000;padding:14px 0}
+    .nav-content{display:flex;justify-content:space-between;align-items:center;gap:16px}
+    .nav-logo{height:44px;width:auto;object-fit:contain}
+    .nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+    .nav-links a{color:#fff;text-decoration:none;font-weight:500;text-transform:uppercase;font-size:.9rem;letter-spacing:2px;transition:color .2s}
+    .nav-links a:hover{color:var(--gold)}
+    .nav-toggle{display:none;background:transparent;border:0;color:#fff;font-size:1.8rem;line-height:1;cursor:pointer}
+    @media (max-width: 900px){
+      .nav-toggle{display:block}
+      .nav-links{display:none;position:absolute;top:100%;right:0;left:0;background:rgba(44,44,44,.98);padding:20px 24px;flex-direction:column;gap:18px}
+      .nav-links.open{display:flex}
+    }
+    /* GLOBAL */
+    section{padding:110px 0;scroll-margin-top:90px}
+    h1{font-family:'Bodoni Moda',serif;font-size:clamp(2.25rem,6vw,5rem);font-weight:400;line-height:1.05}
+    h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.75rem,4vw,3rem);letter-spacing:2px;margin-bottom:40px}
+    .eyebrow{text-transform:uppercase;letter-spacing:3px;color:var(--gold);font-weight:600;font-size:.9rem}
+    /* HERO */
+    .hero{height:100vh;position:relative;display:flex;align-items:center;justify-content:center;background:var(--cream)}
+    .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.3}
+    .hero-content{position:relative;z-index:2;text-align:center;max-width:1000px;padding:0 40px}
+    .hero-badge{display:inline-block;padding:12px 40px;border:2px solid var(--gold);margin-bottom:32px;font-weight:600;letter-spacing:3px;text-transform:uppercase;font-size:.9rem;background:rgba(255,255,255,.4)}
+    .stats{display:flex;justify-content:center;gap:80px;margin-top:44px;flex-wrap:wrap}
+    .stat{text-align:center;min-width:120px}
+    .stat-number{font-size:clamp(1.75rem,3.2vw,3rem);color:var(--gold);font-weight:700;display:block}
+    .stat-label{text-transform:uppercase;letter-spacing:2px;font-size:.8rem;margin-top:8px}
+    /* PARTNERSHIP */
+    .section-header{text-align:center;margin-bottom:60px}
+    .partnership-intro{font-size:1.2rem;text-align:center;max-width:900px;margin:0 auto 40px;font-style:italic;color:var(--grey)}
+    .partnership-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:60px}
+    .partnership-card{padding:40px;background:var(--cream);text-align:center}
+    .partnership-card h3{color:var(--gold);font-size:1.6rem;margin-bottom:12px}
+    .truth-section{background:var(--cream);padding:40px;margin:40px 0}
+    .truth-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:800px;margin:0 auto}
+    .truth-item{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid rgba(0,0,0,.1)}
+    .truth-item strong{color:var(--gold);white-space:nowrap}
+    /* CAMPAIGN */
+    .campaign-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+    .campaign-grid--two{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;max-width:850px;margin:0 auto}
+    .campaign-card{background:#fff;border:1px solid var(--gold);padding:40px;text-align:center;transition:transform .25s,box-shadow .25s}
+    .campaign-card:hover{transform:translateY(-10px);box-shadow:0 20px 40px rgba(0,0,0,.1)}
+    .campaign-icon{font-size:3rem;margin-bottom:14px}
+    .campaign-metrics{display:flex;justify-content:center;gap:28px;margin-top:14px;padding-top:14px;border-top:1px solid rgba(0,0,0,.1)}
+    /* PACKAGES */
+    .packages{background:var(--cream)}
+    .packages-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;max-width:1200px;margin:0 auto}
+    .package-card{background:#fff;box-shadow:0 10px 40px rgba(0,0,0,.1);position:relative}
+    .package-header{background:var(--charcoal);color:#fff;padding:40px;text-align:center}
+    .package-price{font-size:3rem;color:var(--gold);font-weight:700}
+    .package-body{padding:40px}
+    .package-features{list-style:none}
+    .package-features li{padding:12px 0;border-bottom:1px solid rgba(0,0,0,.06)}
+    .package-features li strong{color:var(--gold)}
+    .featured{border:3px solid var(--gold)}
+    .featured-badge{position:absolute;top:-15px;right:40px;background:var(--gold);color:#fff;padding:5px 20px;font-weight:600;text-transform:uppercase;font-size:.8rem}
+    /* PROGRAM DETAILS */
+    .narrow{max-width:1100px}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+    .card{border:1px solid var(--gold);padding:22px;border-radius:10px;background:#fff}
+    .muted{color:#666}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .kpi{display:flex;justify-content:space-between;border-top:1px solid rgba(0,0,0,.08);padding-top:10px;margin-top:10px;font-size:.95rem}
+    .table{width:100%;border-collapse:collapse;font-size:.98rem}
+    .table th,.table td{border-bottom:1px solid rgba(0,0,0,.08);padding:10px 8px;text-align:left;vertical-align:top}
+    /* CTA */
+    .cta{background:var(--charcoal);color:#fff;text-align:center;padding:100px 0}
+    .btn{display:inline-block;padding:18px 44px;margin:8px;text-decoration:none;text-transform:uppercase;letter-spacing:2px;font-weight:600;border-radius:999px;transition:transform .2s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--gold);color:#fff}
+    .contact-info{margin-top:40px;font-size:1.1rem}
+    .contact-info a{color:var(--gold);text-decoration:none}
+    /* RESPONSIVE */
+    @media (max-width:1024px){section{padding:80px 0}}
+    @media (max-width:768px){
+      .partnership-grid,.campaign-grid,.packages-grid,.truth-grid,.two-col{grid-template-columns:1fr}
+      .campaign-grid--two{grid-template-columns:1fr}
+      .stats{gap:24px}
+      .stat{min-width:45%}
+    }
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="container nav-content">
-            <img src="Plasencia_logo_WHITE.png" alt="Plasencia" class="nav-logo">
-            <ul class="nav-links">
-                <li><a href="#partnership">Partnership</a></li>
-                <li><a href="#strategy">Strategy</a></li>
-                <li><a href="#investment">Investment</a></li>
-                <li><a href="#contact">Contact</a></li>
+  <!-- NAV -->
+  <nav class="nav" aria-label="Primary">
+    <div class="container nav-content">
+      <img src="Plasencia_logo_WHITE.png" alt="Plasencia" class="nav-logo" loading="lazy" decoding="async">
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#partnership">Partnership</a></li>
+        <li><a href="#strategy">Strategy</a></li>
+        <li><a href="#investment">Investment</a></li>
+        <li><a href="#program">Program Details</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <img src="CA_logo_WHITE.png" alt="Cigar Aficionado" class="nav-logo" loading="lazy" decoding="async">
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Hero">
+    <video autoplay muted loop playsinline class="hero-video" poster="Girl.jpg">
+      <source src="Girl.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <div class="hero-badge">Cigar Aficionado × Plasencia 1865</div>
+      <h1>160 Years of<br><span style="color:var(--gold);font-style:italic">Unbroken Legacy</span></h1>
+      <p style="font-size:1.3rem;margin:20px 0 10px;font-style:italic">Six Generations. One Family. One Extraordinary Story.</p>
+      <div class="stats" role="list">
+        <div class="stat" role="listitem"><span class="stat-number">1865</span><span class="stat-label">Established</span></div>
+        <div class="stat" role="listitem"><span class="stat-number">6</span><span class="stat-label">Generations</span></div>
+        <div class="stat" role="listitem"><span class="stat-number">160</span><span class="stat-label">Years</span></div>
+        <div class="stat" role="listitem"><span class="stat-number">1</span><span class="stat-label">Family</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERSHIP -->
+  <section id="partnership">
+    <div class="container">
+      <div class="section-header"><h2>WHY <span style="color:var(--gold)">CIGAR AFICIONADO × PLASENCIA</span></h2></div>
+      <p class="partnership-intro">In luxury marketing, heritage is claimed. With Plasencia, it's proven.</p>
+
+      <div class="partnership-grid">
+        <div class="partnership-card">
+          <h3>The Audience</h3>
+          <p>Cigar Aficionado defines the conversation. Our audience invests in experiences, collects stories, and celebrates craftsmanship.</p>
+        </div>
+        <div class="partnership-card">
+          <h3>The Opportunity</h3>
+          <p>New, digitally native consumers verify claims. Plasencia offers what money can't manufacture: authenticity.</p>
+        </div>
+        <div class="partnership-card">
+          <h3>The Execution</h3>
+          <p>We craft market leadership — every dollar traceable, every impression measurable, every story authentic.</p>
+        </div>
+      </div>
+
+      <div class="truth-section">
+        <div class="truth-grid">
+          <div class="truth-item"><strong>Your competitors:</strong><span>Have marketing budgets</span></div>
+          <div class="truth-item"><strong>You have:</strong><span>Marketing truth</span></div>
+          <div class="truth-item"><strong>Your competitors:</strong><span>Have brand stories</span></div>
+          <div class="truth-item"><strong>You have:</strong><span>Brand evidence</span></div>
+          <div class="truth-item"><strong>Your competitors:</strong><span>Have heritage claims</span></div>
+          <div class="truth-item"><strong>You have:</strong><span>Heritage names</span></div>
+        </div>
+      </div>
+
+      <p style="text-align:center;font-size:1.15rem;margin-top:30px;color:var(--gold);font-style:italic">
+        Partner with the only platform with the authority and credibility to transform your 160-year truth into market dominance.
+      </p>
+    </div>
+  </section>
+
+  <!-- STRATEGY -->
+  <section id="strategy">
+    <div class="container">
+      <div class="section-header"><h2>CAMPAIGN <span style="color:var(--gold)">STRATEGY</span></h2></div>
+
+      <!-- Top row -->
+      <div class="campaign-grid" style="margin-bottom:32px">
+        <div class="campaign-card">
+          <div class="campaign-icon">📖</div>
+          <h3>Print Leadership</h3>
+          <p>Premium multi-issue schedule aligned to key tentpoles and editorial moments.</p>
+          <div class="campaign-metrics">
+            <div><strong style="color:var(--gold)">Select</strong><br><small>12× schedule — $310,800</small></div>
+            <div><strong style="color:var(--gold)">Signature</strong><br><small>Schedule — $452,300</small></div>
+          </div>
+        </div>
+
+        <div class="campaign-card">
+          <div class="campaign-icon">🎯</div>
+          <h3>Digital Precision</h3>
+          <p>Landing page, native extension, paid social, newsletters, and dedicated emails.</p>
+          <div class="campaign-metrics">
+            <div><strong style="color:var(--gold)">Select</strong><br><small>1,096,000 impressions</small></div>
+            <div><strong style="color:var(--gold)">Signature</strong><br><small>1,816,880 impressions</small></div>
+          </div>
+        </div>
+
+        <div class="campaign-card">
+          <div class="campaign-icon">🥂</div>
+          <h3>Big Smoke Access</h3>
+          <p>All-Access presence connecting the Plasencia family with high-value buyers.</p>
+          <div class="campaign-metrics">
+            <div><strong style="color:var(--gold)">Both</strong><br><small>$10,000 All Access</small></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom row -->
+      <div class="campaign-grid--two">
+        <div class="campaign-card">
+          <div class="campaign-icon">📧</div>
+          <h3>Dedicated Emails</h3>
+          <p>Direct, measurable touchpoints to verified enthusiasts.</p>
+          <div class="campaign-metrics">
+            <div><strong style="color:var(--gold)">Select</strong><br><small>2× — 100K subscribers</small></div>
+            <div><strong style="color:var(--gold)">Signature</strong><br><small>3× — 150K subscribers</small></div>
+          </div>
+        </div>
+
+        <div class="campaign-card">
+          <div class="campaign-icon">📰</div>
+          <h3>Cigar Watch Newsletter</h3>
+          <p>High-intent editorial environment.</p>
+          <div class="campaign-metrics">
+            <div><strong style="color:var(--gold)">Select</strong><br><small>1× — 160K subscribers</small></div>
+            <div><strong style="color:var(--gold)">Signature</strong><br><small>2× — 320K subscribers</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INVESTMENT -->
+  <section id="investment" class="packages">
+    <div class="container">
+      <div class="section-header"><h2>INVESTMENT <span style="color:var(--gold)">OPTIONS</span></h2></div>
+
+      <div class="packages-grid">
+        <!-- SELECT -->
+        <div class="package-card">
+          <div class="package-header">
+            <h3 style="font-size:1.1rem;margin-bottom:10px">SELECT PACKAGE</h3>
+            <div class="package-price">$361,184</div>
+          </div>
+          <div class="package-body">
+            <ul class="package-features">
+              <li><strong>Print:</strong> 12× schedule — <strong>$310,800</strong></li>
+              <li><strong>Digital (3 months):</strong> <strong>$40,384</strong> — <em>1,096,000 impressions</em></li>
+              <li>• Landing Page ($3K media / $1K prod)</li>
+              <li>• Native Extension ($4,628 media / $2,314 prod) — 232,000 impressions</li>
+              <li>• Instagram: 1× Post ($4K), 1× Story ($3,500)</li>
+              <li>• Paid Social ($4,999 media / $1,943 prod) — 278,000 impressions</li>
+              <li>• Cigar Watch Newsletter: 1× — 160K subscribers ($5K)</li>
+              <li>• Dedicated Emails: 2× — 100K subscribers ($10K)</li>
+              <li><strong>Big Smoke All Access:</strong> <strong>$10,000</strong></li>
+              <li><strong>Added Value:</strong> 1× IG Post, 1× IG Story, 1× Print Page, no 2026 page-rate increase</li>
             </ul>
-            <img src="CA_logo_WHITE.png" alt="Cigar Aficionado" class="nav-logo">
+          </div>
         </div>
-    </nav>
-    
-    <!-- Hero -->
-    <section class="hero">
-        <video autoplay muted loop playsinline class="hero-video">
-            <source src="Girl.mp4" type="video/mp4">
-        </video>
-        <div class="hero-content">
-            <div class="hero-badge">Cigar Aficionado × Plasencia 1865</div>
-            <h1>160 Years of<br><span class="gold">Unbroken Legacy</span></h1>
-            <p style="font-size: 1.5rem; margin: 30px 0; font-style: italic;">Six Generations. One Family. One Extraordinary Story.</p>
-            
-            <div class="stats">
-                <div class="stat">
-                    <span class="stat-number">1865</span>
-                    <span class="stat-label">Established</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">6</span>
-                    <span class="stat-label">Generations</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">160</span>
-                    <span class="stat-label">Years</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">1</span>
-                    <span class="stat-label">Family</span>
-                </div>
-            </div>
+
+        <!-- SIGNATURE -->
+        <div class="package-card featured">
+          <span class="featured-badge">RECOMMENDED</span>
+          <div class="package-header">
+            <h3 style="font-size:1.1rem;margin-bottom:10px">SIGNATURE PACKAGE</h3>
+            <div class="package-price">$537,094</div>
+          </div>
+          <div class="package-body">
+            <ul class="package-features">
+              <li><strong>Print:</strong> Schedule — <strong>$452,300</strong></li>
+              <li><strong>Digital (6 months):</strong> <strong>$74,794</strong> — <em>1,816,880 impressions</em></li>
+              <li>• Landing Page ($3K media / $1K prod)</li>
+              <li>• Article + Homepage ($2K media / $1K prod)</li>
+              <li>• Native Extension ($9,265 media / $4,632 prod) — 465,000 impressions</li>
+              <li>• Instagram: 2× Posts ($8K), 2× Stories ($7K)</li>
+              <li>• Paid Social ($10,006 media / $3,891 prod) — 555,880 impressions</li>
+              <li>• Cigar Watch Newsletter: 2× — 320K subscribers ($10K)</li>
+              <li>• Dedicated Emails: 3× — 150K subscribers ($15K)</li>
+              <li><strong>Big Smoke All Access:</strong> <strong>$10,000</strong></li>
+              <li><strong>Added Value:</strong> 1× IG Post, 1× IG Story, 1× Cigar Watch, 2× Print Pages, no 2026 page-rate increase</li>
+            </ul>
+          </div>
         </div>
-    </section>
-    
-    <!-- Partnership -->
-    <section id="partnership" class="partnership">
-        <div class="container">
-            <div class="section-header">
-                <h2>WHY <span class="gold">CIGAR AFICIONADO × PLASENCIA</span></h2>
-            </div>
-            
-            <p class="partnership-intro">
-                In luxury marketing, heritage is claimed. With Plasencia, it's proven.
-            </p>
-            
-            <p style="text-align: center; max-width: 900px; margin: 0 auto 60px; line-height: 1.8;">
-                While others celebrate purchased histories and borrowed legacies, Plasencia stands alone—
-                160 years, one family, six generations. This is the convergence of a true multi-generational story
-                with the world's most influential premium cigar platform.
-            </p>
-            
-            <div class="partnership-grid">
-                <div class="partnership-card">
-                    <h3>The Audience</h3>
-                    <p>Cigar Aficionado doesn't just reach cigar connoisseurs—we define the conversation. Our audience doesn't buy cigars; they invest in experiences, collect stories, and celebrate craftsmanship.</p>
-                </div>
-                <div class="partnership-card">
-                    <h3>The Opportunity</h3>
-                    <p>Today's consumers can verify your claims and distinguish marketing from mastery. Plasencia offers what money can't manufacture: authenticity.</p>
-                </div>
-                <div class="partnership-card">
-                    <h3>The Execution</h3>
-                    <p>We don't just sell advertising. We craft market leadership. Every dollar traceable. Every impression measurable. Every story authentic.</p>
-                </div>
-            </div>
-            
-            <div class="truth-section">
-                <h3 style="text-align: center; font-size: 2rem; margin-bottom: 40px;">The Partnership Truth</h3>
-                <div class="truth-grid">
-                    <div class="truth-item">
-                        <strong>Your competitors:</strong>
-                        <span>Have marketing budgets</span>
-                    </div>
-                    <div class="truth-item">
-                        <strong>You have:</strong>
-                        <span>Marketing truth</span>
-                    </div>
-                    <div class="truth-item">
-                        <strong>Your competitors:</strong>
-                        <span>Have brand stories</span>
-                    </div>
-                    <div class="truth-item">
-                        <strong>You have:</strong>
-                        <span>Brand evidence</span>
-                    </div>
-                    <div class="truth-item">
-                        <strong>Your competitors:</strong>
-                        <span>Have heritage claims</span>
-                    </div>
-                    <div class="truth-item">
-                        <strong>You have:</strong>
-                        <span>Heritage names</span>
-                    </div>
-                </div>
-            </div>
-            
-            <p style="text-align: center; font-size: 1.3rem; margin-top: 60px; color: var(--gold); font-style: italic;">
-                Partner with the only platform with the authority and credibility<br>
-                to transform your 160-year truth into market dominance.
-            </p>
+      </div>
+
+      <p style="text-align:center;margin-top:18px;color:#666;font-size:.95rem">
+        Figures reflect your provided pricing and totals; impression counts are stated per package for accuracy.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROGRAM DETAILS (all “second page” content lives here) -->
+  <section id="program">
+    <div class="container narrow">
+      <div class="eyebrow">Program Details</div>
+      <h2>Why Cigar Aficionado × Plasencia: <span style="color:var(--gold)">The Definitive Partnership</span></h2>
+      <p class="muted" style="margin-bottom:20px">
+        While others celebrate purchased histories and borrowed legacies, Plasencia stands alone—160 years, one family, five active generations still working the fields.
+        This isn’t just another anniversary campaign. It’s the convergence of the industry’s only true multi-generational story with the world’s most influential premium cigar platform.
+      </p>
+
+      <div class="two-col" style="margin-top:10px">
+        <div class="card">
+          <h3 style="margin-bottom:8px">The Alignment</h3>
+          <p class="muted">Cigar Aficionado doesn’t just reach cigar enthusiasts—we define the conversation. Our audience invests in experiences, collects stories, and celebrates craftsmanship.</p>
+          <ul class="muted" style="padding-left:18px;line-height:1.7;margin-top:8px">
+            <li>500,000 readers who drove $847M in luxury purchases last year</li>
+            <li>250,000 digital subscribers, ~18 minutes average session time</li>
+            <li>300 VIPs at Big Smoke representing ~$75M in annual cigar purchases</li>
+          </ul>
         </div>
-    </section>
-    
-    <!-- Strategy -->
-    <section id="strategy" class="strategy">
-        <div class="container">
-            <div class="section-header">
-                <h2>CAMPAIGN <span class="gold">STRATEGY</span></h2>
-            </div>
-            
-            <!-- Top row with 3 cards -->
-            <div class="campaign-grid" style="margin-bottom: 40px;">
-                <div class="campaign-card">
-                    <div class="campaign-icon">📖</div>
-                    <h3>Print Excellence</h3>
-                    <p>Premium positioning in the world's most respected cigar publication, reaching decision-makers and collectors.</p>
-                    <div class="campaign-metrics">
-                        <div>
-                            <strong style="font-size: 1.5rem; color: var(--gold);">1.4M</strong><br>
-                            <small>Readers</small>
-                        </div>
-                        <div>
-                            <strong style="font-size: 1.5rem; color: var(--gold);">6</strong><br>
-                            <small>Issues</small>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="campaign-card">
-                    <div class="campaign-icon">🎯</div>
-                    <h3>Digital Precision</h3>
-                    <p>Programmatic excellence with first-party data activation and sequential storytelling.</p>
-                    <div class="campaign-metrics">
-                        <div>
-                            <strong style="font-size: 1.5rem; color: var(--gold);">10M</strong><br>
-                            <small>Impressions</small>
-                        </div>
-                        <div>
-                            <strong style="font-size: 1.5rem; color: var(--gold);">2.5%</strong><br>
-                            <small>CTR</small>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="campaign-card">
-                    <div class="campaign-icon">💫</div>
-                    <h3>#160Moments</h3>
-                    <p>Content hub showcasing 160 unique brand moments and heritage highlights.</p>
-                    <div class="campaign-metrics">
-                        <div>
-                            <strong style="font-size: 1.5rem; color: var(--gold);">160</strong><br>
-                            <small>Moments</small>
-                        </div>
-                        <div>
-                            <strong style="font-size: 1.5rem; color: var(--gold);">6</strong><br>
-                            <small>Months</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Bottom row with 2 cards centered -->
-            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; max-width: 850px; margin: 0 auto;">
-                <div class="campaign-card">
-                    <div class="campaign-icon">🥂</div>
-                    <h3>Big Smoke VIP</h3>
-                    <p>Exclusive sponsorship connecting with 300 ultra-premium consumers.</p>
-                    <div class="campaign-metrics">
-                        <div>
-                            <strong style="font-size: 1.5rem; color: var(--gold);">300</strong><br>
-                            <small>VIPs</small>
-                        </div>
-                        <div>
-                            <strong style="font-size: 1.5rem; color: var(--gold);">1</strong><br>
-                            <small>Night</small>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="campaign-card">
-                    <div class="campaign-icon">📧</div>
-                    <h3>Email Excellence</h3>
-                    <p>Direct access to verified collectors with personalized nurture sequences.</p>
-                    <div class="campaign-metrics">
-                        <div>
-                            <strong style="font-size: 1.5rem; color: var(--gold);">250K</strong><br>
-                            <small>Database</small>
-                        </div>
-                        <div>
-                            <strong style="font-size: 1.5rem; color: var(--gold);">35%</strong><br>
-                            <small>Open Rate</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="card">
+          <h3 style="margin-bottom:8px">The Moment</h3>
+          <p class="muted">New consumers—younger, more diverse, digitally native—seek brands with genuine provenance. They can verify history and separate marketing from mastery.</p>
+          <p class="muted" style="margin-top:6px">Plasencia’s 160th is more than a milestone: it’s a market position no competitor can claim—the world’s only OCIA-certified organic tobacco company; the grower behind celebrated brands now telling its own story.</p>
         </div>
-    </section>
-    
-    <!-- Investment Packages -->
-    <section id="investment" class="packages">
-        <div class="container">
-            <div class="section-header">
-                <h2>INVESTMENT <span class="gold">OPTIONS</span></h2>
-            </div>
-            
-            <div class="packages-grid">
-                <div class="package-card">
-                    <div class="package-header">
-                        <h3 style="font-size: 1.2rem; margin-bottom: 15px;">SELECT PACKAGE</h3>
-                        <div class="package-price">$357,400</div>
-                    </div>
-                    <div class="package-body">
-                        <ul class="package-features">
-                            <li>6 Premium spreads across all 2026 issues</li>
-                            <li>3-month sponsored content landing page</li>
-                            <li>5M programmatic impressions</li>
-                            <li>Big Smoke VIP sponsorship</li>
-                            <li>2 dedicated email campaigns</li>
-                            <li>Performance analytics dashboard</li>
-                            <li>$50K added value</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="package-card featured">
-                    <span class="featured-badge">RECOMMENDED</span>
-                    <div class="package-header">
-                        <h3 style="font-size: 1.2rem; margin-bottom: 15px;">SIGNATURE PACKAGE</h3>
-                        <div class="package-price">$535,900+</div>
-                    </div>
-                    <div class="package-body">
-                        <ul class="package-features">
-                            <li>Revolutionary 12-page flip cover in Jan/Feb Top 25 Issue</li>
-                            <li>Full pages in 5 additional issues</li>
-                            <li>6-month #160Moments digital hub with sponsored content</li>
-                            <li>10M+ programmatic impressions</li>
-                            <li>$15K social media budget</li>
-                            <li>Performance analytics dashboard</li>
-                            <li>$100K+ added value</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+      </div>
+
+      <div class="two-col" style="margin-top:18px">
+        <div class="card">
+          <h3 style="margin-bottom:8px">The Execution</h3>
+          <ul class="muted" style="padding-left:18px;line-height:1.7">
+            <li>Flip-cover innovation to elevate storytelling to editorial art</li>
+            <li>Targeted impressions across <strong>1.10M (Select)</strong> and <strong>1.82M (Signature)</strong> with scalable headroom</li>
+            <li>#160Moments content hub (3–6 months depending on package)</li>
+            <li>Big Smoke All-Access puts the family in conversation with buyers</li>
+          </ul>
         </div>
-    </section>
-    
-    <!-- CTA -->
-    <section id="contact" class="cta">
-        <div class="container">
-            <h2>LET'S BUILD YOUR LEGACY CAMPAIGN</h2>
-            
-            <div style="margin: 40px 0;">
-                <a href="mailto:jcohen@mshanken.com" class="btn btn-primary">Contact Jake Cohen</a>
-            </div>
-            
-            <div class="contact-info">
-                <h3 style="color: var(--gold); margin-bottom: 20px;">Jake Cohen</h3>
-                <p>Tobacco Account Executive<br>
-                M. Shanken Communications<br>
-                <a href="tel:203-561-3977">203.561.3977</a> | 
-                <a href="mailto:jcohen@mshanken.com">jcohen@mshanken.com</a></p>
-            </div>
+        <div class="card">
+          <h3 style="margin-bottom:8px">The Result</h3>
+          <p class="muted">We won’t just celebrate 160 years—we’ll define the next 160. Position Plasencia not as another premium option, but as the standard by which premium is measured.</p>
+          <div class="kpi"><span>Your competitors have</span><strong style="color:var(--gold)">Marketing budgets</strong></div>
+          <div class="kpi"><span>You have</span><strong style="color:var(--gold)">Marketing truth</strong></div>
         </div>
-    </section>
+      </div>
+
+      <h3 style="margin:34px 0 12px">Package Components (Detailed)</h3>
+      <table class="table">
+        <thead>
+          <tr><th>Component</th><th>Select (3 mo)</th><th>Signature (6 mo)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Landing Page</td><td>$3,000 media / $1,000 prod</td><td>$3,000 media / $1,000 prod</td></tr>
+          <tr><td>Article + Homepage</td><td>—</td><td>$2,000 media / $1,000 prod</td></tr>
+          <tr><td>Native Extension</td><td>$4,628 media / $2,314 prod — <strong>232,000 imp</strong></td><td>$9,265 media / $4,632 prod — <strong>465,000 imp</strong></td></tr>
+          <tr><td>Paid Social</td><td>$4,999 media / $1,943 prod — <strong>278,000 imp</strong></td><td>$10,006 media / $3,891 prod — <strong>555,880 imp</strong></td></tr>
+          <tr><td>Instagram</td><td>1× Post ($4,000), 1× Story ($3,500)</td><td>2× Posts ($8,000), 2× Stories ($7,000)</td></tr>
+          <tr><td>Cigar Watch Newsletter</td><td>1× — 160K subs ($5,000)</td><td>2× — 320K subs ($10,000)</td></tr>
+          <tr><td>Dedicated Emails</td><td>2× — 100K subs ($10,000)</td><td>3× — 150K subs ($15,000)</td></tr>
+          <tr><td><strong>Total Digital</strong></td><td><strong>$40,384 — 1,096,000 imp</strong></td><td><strong>$74,794 — 1,816,880 imp</strong></td></tr>
+          <tr><td>Print Schedule</td><td>$310,800 (12×)</td><td>$452,300</td></tr>
+          <tr><td>Big Smoke All Access</td><td>$10,000</td><td>$10,000</td></tr>
+          <tr><td><strong>Grand Total</strong></td><td><strong>$361,184</strong></td><td><strong>$537,094</strong></td></tr>
+          <tr><td>Added Value</td><td>1× IG Post, 1× IG Story, 1× Print Page, no 2026 page-rate increase</td><td>1× IG Post, 1× IG Story, 1× Cigar Watch, 2× Print Pages, no 2026 page-rate increase</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact" class="cta">
+    <div class="container">
+      <h2>LET'S BUILD YOUR LEGACY CAMPAIGN</h2>
+      <div style="margin:28px 0">
+        <a href="mailto:jcohen@mshanken.com" class="btn btn-primary">Contact Jake Cohen</a>
+      </div>
+      <div class="contact-info">
+        <h3 style="color:var(--gold);margin-bottom:12px">Jake Cohen</h3>
+        <p>Tobacco Account Executive<br>M. Shanken Communications<br>
+          <a href="tel:203-561-3977">203.561.3977</a> | <a href="mailto:jcohen@mshanken.com">jcohen@mshanken.com</a>
+        </p>
+      </div>
+      <button class="btn" onclick="window.print()">Print this Proposal</button>
+    </div>
+  </section>
+
+  <script>
+    // Mobile menu
+    const toggle=document.querySelector('.nav-toggle');
+    const links=document.getElementById('navLinks');
+    toggle?.addEventListener('click',()=>{const open=links.classList.toggle('open');toggle.setAttribute('aria-expanded',open?'true':'false')});
+    links?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');toggle.setAttribute('aria-expanded','false')}));
+
+    // Optional: GA4 (uncomment & replace with your ID)
+    // (function(){
+    //   var gtagScript=document.createElement('script');
+    //   gtagScript.async=true;
+    //   gtagScript.src='https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
+    //   document.head.appendChild(gtagScript);
+    //   window.dataLayer=window.dataLayer||[];
+    //   function gtag(){dataLayer.push(arguments);}
+    //   window.gtag=gtag;
+    //   gtag('js',new Date()); gtag('config','G-XXXXXXXXXX');
+    // })();
+  </script>
 </body>
 </html>

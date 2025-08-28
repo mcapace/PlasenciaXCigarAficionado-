@@ -79,7 +79,7 @@
     .stat .n{font-family:"Fraunces",serif; color:var(--gold); font-size:clamp(1.6rem,3.2vw,2.6rem); font-weight:700}
     .stat .l{text-transform:uppercase; letter-spacing:.16em; font-size:.75rem; color:#B9BDC3}
 
-    /* Layout helpers */
+    /* Layout */
     .section-header{text-align:center; margin-bottom:54px}
     .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:36px}
     .grid-2{display:grid; grid-template-columns:repeat(2,1fr); gap:36px}
@@ -94,10 +94,10 @@
       box-shadow:0 8px 32px rgba(0,0,0,.06);
     }
     .card--tone{background:var(--paper)}
-
-    /* Strategy + Packages */
     .campaign-card{transition:transform .2s ease, box-shadow .2s ease}
     .campaign-card:hover{transform:translateY(-8px); box-shadow:0 16px 44px rgba(0,0,0,.10)}
+
+    /* Packages */
     .packages{background:var(--stone)}
     .package{
       position:relative; background:#fff; border:1px solid rgba(0,0,0,.06); border-radius:16px; overflow:visible;
@@ -115,13 +115,8 @@
 
     /* Program (“second page”) */
     #program{background:linear-gradient(180deg,#fff 0,#fff 40%,#FBFBFC 100%)}
-    .pillars .card{display:flex; gap:14px; align-items:flex-start}
-
-    /* Clean steps */
     .steps{counter-reset: step; margin:0; padding:0}
-    .steps li{
-      list-style:none; position:relative; padding-left:48px; margin:18px 0; line-height:1.6;
-    }
+    .steps li{list-style:none; position:relative; padding-left:48px; margin:18px 0; line-height:1.6}
     .steps li::before{
       counter-increment: step; content: counter(step);
       position:absolute; left:0; top:.1rem; width:30px; height:30px; border-radius:50%;
@@ -129,17 +124,6 @@
       color:#111; display:inline-flex; align-items:center; justify-content:center;
       font-weight:800; font-size:.85rem; box-shadow:0 4px 12px rgba(0,0,0,.15)
     }
-
-    .timeline{margin:6px 0 0 0; padding:0}
-    .timeline li{
-      list-style:none; position:relative; padding-left:22px; margin:14px 0; line-height:1.6;
-      border-left:2px solid rgba(0,0,0,.08);
-    }
-    .timeline li::before{
-      content:""; position:absolute; left:-7px; top:.55rem; width:10px; height:10px; border-radius:50%;
-      background:linear-gradient(135deg,var(--gold),var(--gold-2)); box-shadow:0 0 0 3px #fff;
-    }
-    .timeline strong{display:block; margin-bottom:2px}
 
     /* CTA */
     .cta{background:#0D0D0D; color:#fff; text-align:center; padding:110px 0}
@@ -203,26 +187,22 @@
         </div>
         <div class="card card--tone">
           <h3 class="mt-12">The Opportunity</h3>
-          <p class="muted">Today’s buyer verifies claims. Plasencia offers what money can’t manufacture: authenticity and provenance that stand up to scrutiny.</p>
+          <p class="muted">Today’s buyer verifies claims. Plasencia brings what money can’t manufacture: authenticity and provenance, documented across generations.</p>
         </div>
         <div class="card card--tone">
           <h3 class="mt-12">Advertorial Craft — Editorial Craft</h3>
-          <p class="muted">Brand storytelling delivered with editorial standards. We design advertorial formats that feel native, clearly labeled, and credibly presented—so your proof reads with the authority of the platform.</p>
+          <p class="muted">Brand storytelling produced to editorial standards. Clearly labeled, impeccably designed—so proof reads with the authority of the platform.</p>
         </div>
       </div>
 
       <div class="grid-2 mt-36">
         <div class="card">
-          <h3>The Partnership Truth</h3>
-          <ul class="muted" style="margin:12px 0 0 18px; line-height:1.8">
-            <li>Your competitors have marketing budgets. <strong>You have marketing truth.</strong></li>
-            <li>Your competitors have brand stories. <strong>You have brand evidence.</strong></li>
-            <li>Your competitors make heritage claims. <strong>You have heritage names.</strong></li>
-          </ul>
+          <h3>Authenticity</h3>
+          <p class="muted">Real family, real mastery, and practices preserved over time—evidence that builds trust at the very first touch.</p>
         </div>
         <div class="card">
           <h3>Authority</h3>
-          <p class="muted">Three decades shaping luxury tobacco culture. When a story is told here, it’s indexed by buyers, retailers, and collectors as credible, reference-worthy, and worth owning.</p>
+          <p class="muted">Three decades shaping luxury tobacco culture. When a story runs here, buyers and retailers treat it as a reference point—credible and collectible.</p>
         </div>
       </div>
     </div>
@@ -232,40 +212,27 @@
   <section id="strategy" class="pt-0">
     <div class="container">
       <div class="section-header">
-        <h2>Editorial Craft × Precision Delivery</h2>
+        <h2>Advertorial Craft × Precision Delivery</h2>
         <div class="gold-rule"></div>
       </div>
 
       <div class="grid-3">
         <div class="card campaign-card">
           <h3 class="mt-12">Print Leadership</h3>
-          <p class="muted">Multi-issue presence across key tentpoles and signature moments. Creative anchored in proof, people, and process.</p>
-          <!-- numbers under print removed per request -->
+          <p class="muted">Multi-issue presence across tentpoles and signature moments. Creative anchored in proof, people, and process.</p>
         </div>
-
         <div class="card campaign-card">
           <h3 class="mt-12">Digital Precision</h3>
-          <p class="muted">Landing hub, native extension, paid social, newsletters, and dedicated email—sequenced to build desire and intent.</p>
-          <p class="muted" style="font-weight:600; margin-top:10px"><span style="color:var(--gold)">Select:</span> 1,096,000 impressions &nbsp;•&nbsp; <span style="color:var(--gold)">Signature:</span> 1,816,880 impressions</p>
+          <p class="muted">Landing hub, native brand extension, paid social, newsletters, and dedicated email—sequenced to build desire and intent.</p>
+          <!-- Impressions line removed per request -->
         </div>
-
         <div class="card campaign-card">
           <h3 class="mt-12">Big Smoke Access</h3>
           <p class="muted">All-Access presence placing the Plasencia family in conversation with high-value buyers and retailers.</p>
-          <!-- numbers removed here too -->
         </div>
       </div>
 
-      <div class="grid-2 mt-36">
-        <div class="card campaign-card">
-          <h3 class="mt-12">Cigar Watch Newsletter</h3>
-          <p class="muted">A high-intent editorial environment that converts attention into consideration.</p>
-        </div>
-        <div class="card campaign-card">
-          <h3 class="mt-12">Dedicated Email</h3>
-          <p class="muted">Direct, measurable touchpoints to readers and collectors who act.</p>
-        </div>
-      </div>
+      <!-- Removed the Cigar Watch Newsletter / Dedicated Email boxes -->
     </div>
   </section>
 
@@ -286,7 +253,17 @@
           </div>
           <ul class="feature-list">
             <li><strong>Print:</strong> <span>Six (6) premium spreads across 2026 issues</span> — <strong>$310,800</strong></li>
-            <li><strong>Digital (3 mo):</strong> <strong>$40,384</strong> — <em>1,096,000 impressions</em></li>
+            <li><strong>Digital (3 mo):</strong> <strong>$40,384</strong></li>
+            <li style="border-bottom:none; padding-top:6px">
+              <em class="muted">Digital components include:</em>
+              <ul class="muted" style="margin:8px 0 0 18px; line-height:1.7; list-style:disc">
+                <li>Brand landing hub + native brand extension</li>
+                <li>Paid social sequencing and retargeting</li>
+                <li>Cigar Watch newsletter insertions</li>
+                <li>Dedicated email outreach</li>
+                <li>#160Moments content stream</li>
+              </ul>
+            </li>
             <li><strong>Big Smoke All-Access:</strong> $10,000</li>
             <li><strong>Added Value (in addition to the program above):</strong> 1× IG Post, 1× IG Story, 1× Print Page, no 2026 page-rate increase</li>
           </ul>
@@ -301,78 +278,70 @@
           </div>
           <ul class="feature-list">
             <li><strong>Print:</strong> <span>12-page back-cover flip + 5 full pages</span> — <strong>$452,300</strong></li>
-            <li><strong>Digital (6 mo):</strong> <strong>$74,794</strong> — <em>1,816,880 impressions</em></li>
+            <li><strong>Digital (6 mo):</strong> <strong>$74,794</strong></li>
+            <li style="border-bottom:none; padding-top:6px">
+              <em class="muted">Digital components include:</em>
+              <ul class="muted" style="margin:8px 0 0 18px; line-height:1.7; list-style:disc">
+                <li>Brand landing hub + elevated native brand extension</li>
+                <li>Paid social: prospecting → consideration → retargeting flow</li>
+                <li>Cigar Watch newsletter insertions</li>
+                <li>Dedicated email series</li>
+                <li>#160Moments content stream (extended)</li>
+              </ul>
+            </li>
             <li><strong>Big Smoke All-Access:</strong> $10,000</li>
             <li><strong>Added Value (in addition to the program above):</strong> 1× IG Post, 1× IG Story, 1× Cigar Watch, 2× Print Pages, no 2026 page-rate increase</li>
           </ul>
         </div>
       </div>
 
-      <p class="muted center mt-20">Figures reflect your provided pricing and totals; digital shows aggregate impressions only.</p>
+      <p class="muted center mt-20">Totals reflect your approved pricing; digital is shown as aggregate investment only.</p>
     </div>
   </section>
 
-  <!-- PROGRAM DETAILS -->
+  <!-- PROGRAM DETAILS (SECOND PAGE) -->
   <section id="program">
     <div class="container">
       <div class="section-header">
-        <h2>The Back-Cover Flip: Turning Proof into Desire</h2>
-        <p class="lede center">A 12-page back-cover flip transforms your history into a collectible experience—advertorial storytelling produced to editorial standards and delivered with the credibility of Cigar Aficionado.</p>
+        <h2>The Engine: Print Command. Digital Momentum. A Hub That Converts.</h2>
+        <p class="lede center">We don’t run ads—we stage proof. The back-cover flip becomes the collectible centerpiece; digital surrounds the reader until interest turns into action; the hub ties every chapter together.</p>
         <div class="gold-rule"></div>
       </div>
 
-      <div class="grid-3 pillars">
+      <div class="grid-3">
         <div class="card">
-          <h3>How It Reads</h3>
-          <p class="muted">A branded mini-issue—clear labeling, impeccable typography, and narrative pacing. Each spread advances the story: origin, process, signatures, invitation.</p>
+          <h3>The Back-Cover Flip (12 pages)</h3>
+          <p class="muted">A branded, clearly labeled mini-issue produced to editorial standards. The flip opens from the back—immediately signaling rarity. Each turn deepens belief: origin, process, signatures, invitation. It looks like it belongs on a coffee table—and that’s the point: **longer life, greater influence, repeated reads.**</p>
         </div>
         <div class="card">
-          <h3>Why It Works</h3>
-          <p class="muted">Buyers engage longer with advertorial that looks and feels like the magazine it lives in. Authority transfers: your proof inherits our standard.</p>
+          <h3>The Print System</h3>
+          <p class="muted">Spreads and full pages are staged across tentpoles so momentum never drops. The magazine setting confers status; the pacing delivers recall. Buyers don’t just see Plasencia—they carry the story issue to issue.</p>
         </div>
         <div class="card">
-          <h3>What It Signals</h3>
-          <p class="muted">Confidence, investment, and leadership. A statement piece that tells retailers and collectors: this is the benchmark.</p>
+          <h3>The Digital System</h3>
+          <p class="muted">A single, elegant hub houses every proof point. Native placements and social sequencing direct qualified readers and buyers to it, then retargeting brings them back until they act. **Same story, multiple doors in.**</p>
         </div>
       </div>
 
       <div class="grid-2 mt-36">
         <div class="card">
-          <h3>How the Program Works</h3>
+          <h3>How It Works (Snapshot)</h3>
           <ol class="steps">
-            <li>
-              <strong>Discover</strong>
-              <div class="muted">Homepage placement, print moments, and Cigar Watch introduce the chaptered story.</div>
-            </li>
-            <li>
-              <strong>Prove</strong>
-              <div class="muted">Back-cover flip + #160Moments establish heritage, process, and people—with receipts.</div>
-            </li>
-            <li>
-              <strong>Engage</strong>
-              <div class="muted">Native and paid social sequence to readers and buyers most likely to act.</div>
-            </li>
-            <li>
-              <strong>Invite</strong>
-              <div class="muted">Dedicated email and VIP activations move interest to trials, lists, and retail action.</div>
-            </li>
+            <li><strong>Command Attention</strong><div class="muted">Back-cover flip + spreads establish leadership and make the brand collectible.</div></li>
+            <li><strong>Build Belief</strong><div class="muted">Advertorial stories—clearly labeled—read with the credibility of the platform.</div></li>
+            <li><strong>Guide the Journey</strong><div class="muted">Native + paid social route readers to the hub; content deepens desire.</div></li>
+            <li><strong>Create Action</strong><div class="muted">Newsletters and dedicated email invite trials, lists, and retail moments.</div></li>
           </ol>
         </div>
-
         <div class="card">
-          <h3>Advertorial Craft — Editorial Craft</h3>
-          <ul class="timeline">
-            <li><strong>Origin</strong><span class="muted">Family, fields, and philosophy establish the “why.”</span></li>
-            <li><strong>Process</strong><span class="muted">Seed to fermentation—methods and standards, shown clearly.</span></li>
-            <li><strong>Signature</strong><span class="muted">Lines and blends tied to chapters and names.</span></li>
-            <li><strong>Invitation</strong><span class="muted">How to collect, taste, and experience—plus where to act.</span></li>
-          </ul>
+          <h3>Why It Wins</h3>
+          <p class="muted"><strong>Authority transfers.</strong> When the story appears here, retailers and buyers treat it as verified. <strong>Craft persuades.</strong> The design invites lingering—time spent becomes belief. <strong>Consistency compounds.</strong> One narrative, repeated across channels, turns a 160-year history into a modern buying signal.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA (no buttons per request) -->
+  <!-- CTA (no buttons) -->
   <section id="contact" class="cta">
     <div class="container">
       <h2>Let’s Build Your Legacy Campaign</h2>

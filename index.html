@@ -10,7 +10,7 @@
   <!-- Elegant type: Fraunces (display) + Inter (body) -->
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    /* =============== Base */
+    /* Base */
     *,*::before,*::after{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
@@ -29,11 +29,9 @@
     h2{font-size:clamp(1.9rem,4vw,3rem); font-weight:700; margin:0 0 16px}
     h3{font-size:clamp(1.2rem,2.4vw,1.6rem); font-weight:600; margin:0 0 8px}
     .lede{font-size:1.12rem; color:#4C4F55}
-
-    /* Simple gold hairline */
     .gold-rule{height:1px; background:linear-gradient(90deg,transparent,rgba(212,175,55,.9),transparent); margin:26px 0}
 
-    /* =============== NAV */
+    /* NAV */
     .nav{
       position:fixed; inset:0 0 auto 0; z-index:1000; background:rgba(13,13,13,.92);
       backdrop-filter:saturate(1.1) blur(6px); box-shadow:0 4px 24px rgba(0,0,0,.22);
@@ -41,9 +39,8 @@
     .nav-inner{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0}
     .brand{display:flex; align-items:center; gap:18px}
     .nav-logo{display:block; height:auto; object-fit:contain}
-    /* Bigger Plasencia, smaller CA */
-    .logo-plasencia{height:76px}
-    .logo-ca{height:34px; opacity:.95}
+    .logo-plasencia{height:76px}   /* larger */
+    .logo-ca{height:34px; opacity:.95} /* smaller */
     .nav-links{display:flex; align-items:center; gap:28px; list-style:none; margin:0; padding:0}
     .nav-links a{
       color:#F8F8F8; text-decoration:none; text-transform:uppercase; letter-spacing:.16em; font-size:.78rem; font-weight:700;
@@ -57,7 +54,7 @@
       .nav-links.open{display:flex}
     }
 
-    /* =============== HERO (deeper, no yellow cast) */
+    /* HERO (deep, no yellow) */
     .hero{
       min-height:100vh; position:relative; display:grid; place-items:center;
       background:radial-gradient(1200px 700px at 60% 35%, #1A1A1A 0%, #0F0F0F 55%, #0B0B0B 100%);
@@ -75,15 +72,14 @@
     }
     .title{margin-top:20px}
     .no-wrap{white-space:nowrap}
-    @media (max-width: 720px){ .no-wrap{white-space:normal} } /* allow wrapping on phones */
-
+    @media (max-width: 720px){ .no-wrap{white-space:normal} }
     .hero .lede{color:#CDCFD4}
     .stats{display:flex; flex-wrap:wrap; gap:56px; justify-content:center; margin-top:36px}
     .stat{text-align:center; min-width:120px}
     .stat .n{font-family:"Fraunces",serif; color:var(--gold); font-size:clamp(1.6rem,3.2vw,2.6rem); font-weight:700}
     .stat .l{text-transform:uppercase; letter-spacing:.16em; font-size:.75rem; color:#B9BDC3}
 
-    /* =============== Layout helpers */
+    /* Layout helpers */
     .section-header{text-align:center; margin-bottom:54px}
     .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:36px}
     .grid-2{display:grid; grid-template-columns:repeat(2,1fr); gap:36px}
@@ -92,22 +88,19 @@
     .center{text-align:center}
     .mt-12{margin-top:12px} .mt-20{margin-top:20px} .mt-28{margin-top:28px} .mt-36{margin-top:36px}
 
-    /* =============== Cards / elements */
+    /* Cards */
     .card{
       background:#fff; border:1px solid rgba(0,0,0,.08); border-radius:14px; padding:26px;
       box-shadow:0 8px 32px rgba(0,0,0,.06);
     }
     .card--tone{background:var(--paper)}
-    .icon{font-size:1.6rem; line-height:1}
 
-    /* =============== Strategy + Packages */
+    /* Strategy + Packages */
     .campaign-card{transition:transform .2s ease, box-shadow .2s ease}
     .campaign-card:hover{transform:translateY(-8px); box-shadow:0 16px 44px rgba(0,0,0,.10)}
-    .metrics{display:flex; gap:28px; justify-content:center; padding-top:12px; margin-top:8px; border-top:1px solid rgba(0,0,0,.08); font-size:.95rem}
-
     .packages{background:var(--stone)}
     .package{
-      position:relative; background:#fff; border:1px solid rgba(0,0,0,.06); border-radius:16px; overflow:visible; /* ensure no clipping */
+      position:relative; background:#fff; border:1px solid rgba(0,0,0,.06); border-radius:16px; overflow:visible;
       box-shadow:0 14px 50px rgba(0,0,0,.10)
     }
     .package .hd{background:#111; color:#fff; text-align:center; padding:32px 20px}
@@ -120,14 +113,14 @@
     .feature-list li{padding:10px 0; border-bottom:1px solid rgba(0,0,0,.06)}
     .feature-list li strong{color:var(--gold)}
 
-    /* =============== Program (“second page”) */
+    /* Program (“second page”) */
     #program{background:linear-gradient(180deg,#fff 0,#fff 40%,#FBFBFC 100%)}
     .pillars .card{display:flex; gap:14px; align-items:flex-start}
 
-    /* Clean, robust steps with CSS counters (no weird dots, no clipping) */
-    .steps{counter-reset: step}
+    /* Clean steps */
+    .steps{counter-reset: step; margin:0; padding:0}
     .steps li{
-      list-style:none; position:relative; padding-left:48px; margin:18px 0; line-height:1.6; /* space so nothing gets cut */
+      list-style:none; position:relative; padding-left:48px; margin:18px 0; line-height:1.6;
     }
     .steps li::before{
       counter-increment: step; content: counter(step);
@@ -137,7 +130,6 @@
       font-weight:800; font-size:.85rem; box-shadow:0 4px 12px rgba(0,0,0,.15)
     }
 
-    /* Simple, safe timeline bullets (no overlap with text) */
     .timeline{margin:6px 0 0 0; padding:0}
     .timeline li{
       list-style:none; position:relative; padding-left:22px; margin:14px 0; line-height:1.6;
@@ -149,27 +141,16 @@
     }
     .timeline strong{display:block; margin-bottom:2px}
 
-    /* Measurement tables */
-    .mini-table{width:100%; border-collapse:collapse; font-size:.97rem}
-    .mini-table td{padding:8px 6px; border-bottom:1px solid rgba(0,0,0,.06)}
-
     /* CTA */
     .cta{background:#0D0D0D; color:#fff; text-align:center; padding:110px 0}
-    .btn{
-      display:inline-block; padding:16px 38px; border-radius:999px; text-decoration:none; font-weight:800; letter-spacing:.14em; text-transform:uppercase
-    }
-    .btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold-2)); color:#111}
-    .btn-primary:hover{filter:saturate(1.1) contrast(1.05)}
-    .btn-ghost{background:#fff; color:#111; border:1px solid rgba(0,0,0,.12)}
     .contact{margin-top:26px; font-size:1.05rem}
     .contact a{color:var(--gold); text-decoration:none}
 
-    /* Responsive tweaks */
     @media (max-width:1024px){section{padding:90px 0}}
   </style>
 </head>
 <body>
-  <!-- =============== NAV -->
+  <!-- NAV -->
   <header class="nav">
     <div class="container nav-inner">
       <div class="brand">
@@ -187,19 +168,16 @@
     </div>
   </header>
 
-  <!-- =============== HERO (deeper, no yellow) -->
+  <!-- HERO -->
   <section class="hero" aria-label="Hero">
     <video autoplay muted loop playsinline poster="Girl.jpg">
       <source src="Girl.mp4" type="video/mp4">
     </video>
     <div class="content">
       <span class="badge">Cigar Aficionado × Plasencia 1865</span>
-      <!-- One line on desktop; allowed to wrap on mobile -->
       <h1 class="title">160 Years of <span class="no-wrap" style="color:var(--gold)">Unbroken&nbsp;Legacy</span></h1>
       <p class="lede">Six generations. One family. One extraordinary story.</p>
-
       <div class="gold-rule" style="opacity:.7"></div>
-
       <div class="stats">
         <div class="stat"><div class="n">1865</div><div class="l">Established</div></div>
         <div class="stat"><div class="n">6</div><div class="l">Generations</div></div>
@@ -209,7 +187,7 @@
     </div>
   </section>
 
-  <!-- =============== PARTNERSHIP -->
+  <!-- PARTNERSHIP -->
   <section id="partnership">
     <div class="container">
       <div class="section-header">
@@ -220,19 +198,16 @@
 
       <div class="grid-3">
         <div class="card card--tone">
-          <div class="icon">👥</div>
           <h3 class="mt-12">The Audience</h3>
           <p class="muted">Cigar Aficionado defines the conversation. We reach readers, collectors, and buyers who invest in experiences and celebrate craftsmanship.</p>
         </div>
         <div class="card card--tone">
-          <div class="icon">🧭</div>
           <h3 class="mt-12">The Opportunity</h3>
           <p class="muted">Today’s buyer verifies claims. Plasencia offers what money can’t manufacture: authenticity and provenance that stand up to scrutiny.</p>
         </div>
         <div class="card card--tone">
-          <div class="icon">🏛️</div>
-          <h3 class="mt-12">The Execution</h3>
-          <p class="muted">We build market leadership—every dollar traceable, every impression measurable, every story authentic.</p>
+          <h3 class="mt-12">Advertorial Craft — Editorial Craft</h3>
+          <p class="muted">Brand storytelling delivered with editorial standards. We design advertorial formats that feel native, clearly labeled, and credibly presented—so your proof reads with the authority of the platform.</p>
         </div>
       </div>
 
@@ -246,14 +221,14 @@
           </ul>
         </div>
         <div class="card">
-          <h3>Positioning</h3>
-          <p class="muted">The grower behind celebrated brands steps forward. From field to band, the Plasencia standard becomes the measure of premium.</p>
+          <h3>Authority</h3>
+          <p class="muted">Three decades shaping luxury tobacco culture. When a story is told here, it’s indexed by buyers, retailers, and collectors as credible, reference-worthy, and worth owning.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- =============== STRATEGY -->
+  <!-- STRATEGY -->
   <section id="strategy" class="pt-0">
     <div class="container">
       <div class="section-header">
@@ -263,43 +238,38 @@
 
       <div class="grid-3">
         <div class="card campaign-card">
-          <div class="icon">📖</div>
           <h3 class="mt-12">Print Leadership</h3>
-          <p class="muted">Multi-issue schedule aligned to tentpoles and signature editorial moments.</p>
-          <div class="metrics"><span><strong style="color:var(--gold)">Select:</strong> 12× — $310,800</span><span><strong style="color:var(--gold)">Signature:</strong> $452,300</span></div>
+          <p class="muted">Multi-issue presence across key tentpoles and signature moments. Creative anchored in proof, people, and process.</p>
+          <!-- numbers under print removed per request -->
         </div>
+
         <div class="card campaign-card">
-          <div class="icon">🎯</div>
           <h3 class="mt-12">Digital Precision</h3>
-          <p class="muted">Landing page, native extension, paid social, newsletters, and dedicated email.</p>
-          <div class="metrics"><span><strong style="color:var(--gold)">Select:</strong> 1,096,000</span><span><strong style="color:var(--gold)">Signature:</strong> 1,816,880</span></div>
+          <p class="muted">Landing hub, native extension, paid social, newsletters, and dedicated email—sequenced to build desire and intent.</p>
+          <p class="muted" style="font-weight:600; margin-top:10px"><span style="color:var(--gold)">Select:</span> 1,096,000 impressions &nbsp;•&nbsp; <span style="color:var(--gold)">Signature:</span> 1,816,880 impressions</p>
         </div>
+
         <div class="card campaign-card">
-          <div class="icon">🥂</div>
           <h3 class="mt-12">Big Smoke Access</h3>
-          <p class="muted">All-Access presence connecting the Plasencia family with high-value buyers.</p>
-          <div class="metrics"><span><strong>Both:</strong> $10,000</span></div>
+          <p class="muted">All-Access presence placing the Plasencia family in conversation with high-value buyers and retailers.</p>
+          <!-- numbers removed here too -->
         </div>
       </div>
 
       <div class="grid-2 mt-36">
         <div class="card campaign-card">
-          <div class="icon">📰</div>
           <h3 class="mt-12">Cigar Watch Newsletter</h3>
-          <p class="muted">High-intent editorial environment with time-spent and purchase power.</p>
-          <div class="metrics"><span><strong style="color:var(--gold)">Select:</strong> 1× — 160K</span><span><strong style="color:var(--gold)">Signature:</strong> 2× — 320K</span></div>
+          <p class="muted">A high-intent editorial environment that converts attention into consideration.</p>
         </div>
         <div class="card campaign-card">
-          <div class="icon">📧</div>
           <h3 class="mt-12">Dedicated Email</h3>
-          <p class="muted">Direct, measurable touchpoints to verified buyers and collectors.</p>
-          <div class="metrics"><span><strong style="color:var(--gold)">Select:</strong> 2× — 100K</span><span><strong style="color:var(--gold)">Signature:</strong> 3× — 150K</span></div>
+          <p class="muted">Direct, measurable touchpoints to readers and collectors who act.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- =============== INVESTMENT -->
+  <!-- INVESTMENT -->
   <section id="investment" class="packages">
     <div class="container">
       <div class="section-header">
@@ -315,16 +285,10 @@
             <div class="price">$361,184</div>
           </div>
           <ul class="feature-list">
-            <li><strong>Print:</strong> 12× schedule — <strong>$310,800</strong></li>
+            <li><strong>Print:</strong> <span>Six (6) premium spreads across 2026 issues</span> — <strong>$310,800</strong></li>
             <li><strong>Digital (3 mo):</strong> <strong>$40,384</strong> — <em>1,096,000 impressions</em></li>
-            <li>• Landing Page ($3K media / $1K prod)</li>
-            <li>• Native Extension ($4,628 / $2,314) — 232,000 imps</li>
-            <li>• Instagram: 1× Post ($4K), 1× Story ($3,500)</li>
-            <li>• Paid Social ($4,999 / $1,943) — 278,000 imps</li>
-            <li>• Cigar Watch: 1× — 160K ($5K)</li>
-            <li>• Dedicated Email: 2× — 100K ($10K)</li>
             <li><strong>Big Smoke All-Access:</strong> $10,000</li>
-            <li><strong>Added Value:</strong> 1× IG Post, 1× IG Story, 1× Print Page, no 2026 page-rate increase</li>
+            <li><strong>Added Value (in addition to the program above):</strong> 1× IG Post, 1× IG Story, 1× Print Page, no 2026 page-rate increase</li>
           </ul>
         </div>
 
@@ -336,150 +300,87 @@
             <div class="price">$537,094</div>
           </div>
           <ul class="feature-list">
-            <li><strong>Print:</strong> Schedule — <strong>$452,300</strong></li>
+            <li><strong>Print:</strong> <span>12-page back-cover flip + 5 full pages</span> — <strong>$452,300</strong></li>
             <li><strong>Digital (6 mo):</strong> <strong>$74,794</strong> — <em>1,816,880 impressions</em></li>
-            <li>• Landing Page ($3K media / $1K prod)</li>
-            <li>• Article + Homepage ($2K / $1K)</li>
-            <li>• Native Extension ($9,265 / $4,632) — 465,000 imps</li>
-            <li>• Instagram: 2× Posts ($8K), 2× Stories ($7K)</li>
-            <li>• Paid Social ($10,006 / $3,891) — 555,880 imps</li>
-            <li>• Cigar Watch: 2× — 320K ($10K)</li>
-            <li>• Dedicated Email: 3× — 150K ($15K)</li>
             <li><strong>Big Smoke All-Access:</strong> $10,000</li>
-            <li><strong>Added Value:</strong> 1× IG Post, 1× IG Story, 1× Cigar Watch, 2× Print Pages, no 2026 page-rate increase</li>
+            <li><strong>Added Value (in addition to the program above):</strong> 1× IG Post, 1× IG Story, 1× Cigar Watch, 2× Print Pages, no 2026 page-rate increase</li>
           </ul>
         </div>
       </div>
 
-      <p class="muted center mt-20">Figures reflect your provided pricing and totals; impression counts are stated per package for accuracy.</p>
+      <p class="muted center mt-20">Figures reflect your provided pricing and totals; digital shows aggregate impressions only.</p>
     </div>
   </section>
 
-  <!-- =============== PROGRAM DETAILS (SECOND PAGE CONTENT) -->
+  <!-- PROGRAM DETAILS -->
   <section id="program">
     <div class="container">
       <div class="section-header">
-        <h2>The Big Idea: Prove, Then Lead</h2>
-        <p class="lede center">Plasencia’s 160-year truth, elevated through editorial craft and delivered with precision to readers, collectors, and buyers who move the market.</p>
+        <h2>The Back-Cover Flip: Turning Proof into Desire</h2>
+        <p class="lede center">A 12-page back-cover flip transforms your history into a collectible experience—advertorial storytelling produced to editorial standards and delivered with the credibility of Cigar Aficionado.</p>
         <div class="gold-rule"></div>
       </div>
 
-      <!-- Benefits / Attributes -->
       <div class="grid-3 pillars">
         <div class="card">
-          <div class="icon">🔏</div>
-          <div>
-            <h3>Authenticity</h3>
-            <p class="muted">From field to band: family, names, and practices that stand up to scrutiny and create trust at first contact.</p>
-          </div>
+          <h3>How It Reads</h3>
+          <p class="muted">A branded mini-issue—clear labeling, impeccable typography, and narrative pacing. Each spread advances the story: origin, process, signatures, invitation.</p>
         </div>
         <div class="card">
-          <div class="icon">🌿</div>
-          <div>
-            <h3>Provenance</h3>
-            <p class="muted">Stewardship over generations—including organic practices—and a traceable supply story buyers can verify.</p>
-          </div>
+          <h3>Why It Works</h3>
+          <p class="muted">Buyers engage longer with advertorial that looks and feels like the magazine it lives in. Authority transfers: your proof inherits our standard.</p>
         </div>
         <div class="card">
-          <div class="icon">🛠️</div>
-          <div>
-            <h3>Craft</h3>
-            <p class="muted">Editorial presentation that treats the work as art—flip covers, long-form features, and filmic cuts.</p>
-          </div>
+          <h3>What It Signals</h3>
+          <p class="muted">Confidence, investment, and leadership. A statement piece that tells retailers and collectors: this is the benchmark.</p>
         </div>
       </div>
 
-      <!-- How it works -->
       <div class="grid-2 mt-36">
         <div class="card">
           <h3>How the Program Works</h3>
           <ol class="steps">
             <li>
               <strong>Discover</strong>
-              <div class="muted">Editorial discovery via homepage placement, print moments, and Cigar Watch.</div>
+              <div class="muted">Homepage placement, print moments, and Cigar Watch introduce the chaptered story.</div>
             </li>
             <li>
               <strong>Prove</strong>
-              <div class="muted">#160Moments content and flip-cover storytelling establish heritage and process.</div>
+              <div class="muted">Back-cover flip + #160Moments establish heritage, process, and people—with receipts.</div>
             </li>
             <li>
               <strong>Engage</strong>
-              <div class="muted">Native extension and paid social sequence assets to qualified readers and buyers.</div>
+              <div class="muted">Native and paid social sequence to readers and buyers most likely to act.</div>
             </li>
             <li>
               <strong>Invite</strong>
-              <div class="muted">Dedicated email and VIP activations invite trials, lists, and retail moments.</div>
-            </li>
-            <li>
-              <strong>Measure</strong>
-              <div class="muted">Dashboards unify delivery, engagement, and outcome metrics for optimization.</div>
+              <div class="muted">Dedicated email and VIP activations move interest to trials, lists, and retail action.</div>
             </li>
           </ol>
         </div>
 
         <div class="card">
-          <h3>Sequenced Storytelling</h3>
+          <h3>Advertorial Craft — Editorial Craft</h3>
           <ul class="timeline">
-            <li>
-              <strong>Origin</strong>
-              <span class="muted">Family history, fields, and philosophy establish the “why.”</span>
-            </li>
-            <li>
-              <strong>Process</strong>
-              <span class="muted">Seed to fermentation—craft steps revealed with evidence.</span>
-            </li>
-            <li>
-              <strong>Signature</strong>
-              <span class="muted">Lines and blends tied to story chapters and moments.</span>
-            </li>
-            <li>
-              <strong>Invitation</strong>
-              <span class="muted">How to taste, collect, and experience—plus where to act.</span>
-            </li>
+            <li><strong>Origin</strong><span class="muted">Family, fields, and philosophy establish the “why.”</span></li>
+            <li><strong>Process</strong><span class="muted">Seed to fermentation—methods and standards, shown clearly.</span></li>
+            <li><strong>Signature</strong><span class="muted">Lines and blends tied to chapters and names.</span></li>
+            <li><strong>Invitation</strong><span class="muted">How to collect, taste, and experience—plus where to act.</span></li>
           </ul>
-        </div>
-      </div>
-
-      <!-- Measurement -->
-      <div class="grid-2 mt-36">
-        <div class="card">
-          <h3>Attribution & Measurement</h3>
-          <p class="muted">Every dollar traceable. Every impression measurable. We deliver transparent reach, engagement quality, and outcome indicators.</p>
-          <ul class="muted" style="margin:12px 0 0 18px; line-height:1.8">
-            <li><strong>Delivery:</strong> impressions by channel, viewability, pacing vs. plan</li>
-            <li><strong>Engagement:</strong> time-spent, scroll-depth, CTR, video quartiles</li>
-            <li><strong>Outcome:</strong> visits, sign-ups, qualified traffic to retail or CRM</li>
-            <li><strong>Optimization:</strong> creative rotation, audience expansion, frequency shaping</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Package Components (Recap)</h3>
-          <table class="mini-table">
-            <tbody>
-              <tr><td>Select Digital</td><td><strong>$40,384</strong> — 1,096,000 imps</td></tr>
-              <tr><td>Signature Digital</td><td><strong>$74,794</strong> — 1,816,880 imps</td></tr>
-              <tr><td>Select Print</td><td>$310,800 (12×)</td></tr>
-              <tr><td>Signature Print</td><td>$452,300</td></tr>
-              <tr><td>Big Smoke (both)</td><td>$10,000</td></tr>
-              <tr><td><strong>Total</strong></td><td><strong>$361,184</strong> / <strong>$537,094</strong></td></tr>
-            </tbody>
-          </table>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- =============== CTA -->
+  <!-- CTA (no buttons per request) -->
   <section id="contact" class="cta">
     <div class="container">
       <h2>Let’s Build Your Legacy Campaign</h2>
-      <a href="mailto:jcohen@mshanken.com" class="btn btn-primary mt-20">Contact Jake Cohen</a>
       <div class="contact">
         <p><strong>Jake Cohen</strong><br/>Tobacco Account Executive — M. Shanken Communications<br/>
           <a href="tel:203-561-3977">203-561-3977</a> • <a href="mailto:jcohen@mshanken.com">jcohen@mshanken.com</a>
         </p>
       </div>
-      <a class="btn btn-ghost mt-20" onclick="window.print()">Print this Proposal</a>
     </div>
   </section>
 

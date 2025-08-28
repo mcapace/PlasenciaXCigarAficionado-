@@ -4,170 +4,176 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Plasencia 160th Anniversary × Cigar Aficionado</title>
-  <meta name="theme-color" content="#1E1E1E"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="theme-color" content="#0D0D0D"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <!-- Elegant type: Fraunces (display) + Inter (body) -->
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    /* Reset & base */
+    /* =============== Base */
     *,*::before,*::after{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
-      margin:0; color:#1F2328; background:#FFFFFF; line-height:1.65;
+      margin:0; color:#1E1F22; background:#FFFFFF; line-height:1.65;
       font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
-      text-rendering:optimizeLegibility; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
     }
     :root{
-      --gold:#D4AF37; --gold-2:#B8901E; --charcoal:#1E1E1E; --ink:#141414; --cream:#FFF7ED; --paper:#FCFAF7;
-      --rule:linear-gradient(90deg,transparent,rgba(212,175,55,.7),transparent);
+      --gold:#D4AF37; --gold-2:#B8901E; --ink:#0D0D0D; --stone:#F6F7F8; --paper:#FBFBFC;
       --max:1400px; --pad:40px;
     }
     .container{max-width:var(--max); margin:0 auto; padding:0 var(--pad)}
     section{padding:120px 0; scroll-margin-top:92px}
     h1,h2,h3{font-family:"Fraunces",serif; line-height:1.08; letter-spacing:.2px}
-    h1{font-size:clamp(2.4rem,6vw,4.75rem); font-weight:600}
-    h2{font-size:clamp(1.8rem,4vw,3rem); font-weight:600; margin:0 0 16px}
+    h1{font-size:clamp(2.4rem,6vw,4.6rem); font-weight:700}
+    h2{font-size:clamp(1.9rem,4vw,3rem); font-weight:700; margin:0 0 16px}
     h3{font-size:clamp(1.2rem,2.4vw,1.6rem); font-weight:600; margin:0 0 8px}
-    .lede{font-size:1.1rem; color:#4D4F52}
-    .eyebrow{font-size:.8rem; text-transform:uppercase; letter-spacing:.22em; color:var(--gold); font-weight:600}
+    .lede{font-size:1.12rem; color:#4C4F55}
 
-    /* Ornaments */
-    .gold-rule{height:1px; background:var(--rule); margin:26px 0}
-    .ornament{
-      width:84px; height:12px; margin:18px auto 0; position:relative;
-      background:linear-gradient(90deg,transparent 0,transparent 30%,var(--gold) 50%,transparent 70%,transparent 100%);
-      mask:radial-gradient(circle at 10% 50%,#000 6px,transparent 7px) left/50% 100% repeat-x;
-      opacity:.85
-    }
+    /* Simple gold hairline */
+    .gold-rule{height:1px; background:linear-gradient(90deg,transparent,rgba(212,175,55,.9),transparent); margin:26px 0}
 
-    /* NAV */
+    /* =============== NAV */
     .nav{
-      position:fixed; inset:0 0 auto 0; z-index:1000; background:rgba(20,20,20,.92);
+      position:fixed; inset:0 0 auto 0; z-index:1000; background:rgba(13,13,13,.92);
       backdrop-filter:saturate(1.1) blur(6px); box-shadow:0 4px 24px rgba(0,0,0,.22);
     }
     .nav-inner{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0}
-    .brand{
-      display:flex; align-items:center; gap:18px;
-    }
+    .brand{display:flex; align-items:center; gap:18px}
     .nav-logo{display:block; height:auto; object-fit:contain}
     /* Bigger Plasencia, smaller CA */
-    .logo-plasencia{height:64px}
-    .logo-ca{height:40px; opacity:.95}
+    .logo-plasencia{height:76px}
+    .logo-ca{height:34px; opacity:.95}
     .nav-links{display:flex; align-items:center; gap:28px; list-style:none; margin:0; padding:0}
     .nav-links a{
-      color:#F7F7F7; text-decoration:none; text-transform:uppercase; letter-spacing:.18em; font-size:.78rem; font-weight:600;
+      color:#F8F8F8; text-decoration:none; text-transform:uppercase; letter-spacing:.16em; font-size:.78rem; font-weight:700;
       transition:color .2s ease;
     }
     .nav-links a:hover{color:var(--gold)}
     .nav-toggle{display:none; background:transparent; border:0; color:#fff; font-size:1.8rem; cursor:pointer}
     @media (max-width: 960px){
       .nav-toggle{display:block}
-      .nav-links{position:absolute; left:0; right:0; top:100%; background:rgba(20,20,20,.98); padding:18px var(--pad); flex-direction:column; align-items:flex-start; display:none}
+      .nav-links{position:absolute; left:0; right:0; top:100%; background:rgba(13,13,13,.98); padding:18px var(--pad); flex-direction:column; align-items:flex-start; display:none}
       .nav-links.open{display:flex}
     }
 
-    /* HERO */
-    .hero{min-height:100vh; position:relative; display:grid; place-items:center; background:var(--paper)}
-    .hero video{
-      position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.28; filter:saturate(.9) contrast(1.05)
+    /* =============== HERO (deeper, no yellow cast) */
+    .hero{
+      min-height:100vh; position:relative; display:grid; place-items:center;
+      background:radial-gradient(1200px 700px at 60% 35%, #1A1A1A 0%, #0F0F0F 55%, #0B0B0B 100%);
+      color:#F5F5F5;
     }
-    .hero .content{position:relative; z-index:1; text-align:center; max-width:1000px; padding:0 var(--pad)}
+    .hero video{
+      position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+      opacity:.24; filter:brightness(.55) contrast(1.05) saturate(.9);
+      mix-blend-mode:normal;
+    }
+    .hero .content{position:relative; z-index:1; text-align:center; max-width:1100px; padding:0 var(--pad)}
     .badge{
       display:inline-block; padding:12px 36px; border:1.5px solid var(--gold);
-      letter-spacing:.2em; text-transform:uppercase; font-weight:700; font-size:.78rem; background:rgba(255,255,255,.5);
+      letter-spacing:.2em; text-transform:uppercase; font-weight:800; font-size:.78rem; background:rgba(255,255,255,.06); color:#F0F0F0;
     }
+    .title{margin-top:20px}
+    .no-wrap{white-space:nowrap}
+    @media (max-width: 720px){ .no-wrap{white-space:normal} } /* allow wrapping on phones */
+
+    .hero .lede{color:#CDCFD4}
     .stats{display:flex; flex-wrap:wrap; gap:56px; justify-content:center; margin-top:36px}
     .stat{text-align:center; min-width:120px}
     .stat .n{font-family:"Fraunces",serif; color:var(--gold); font-size:clamp(1.6rem,3.2vw,2.6rem); font-weight:700}
-    .stat .l{text-transform:uppercase; letter-spacing:.16em; font-size:.75rem; color:#5a5c5f}
+    .stat .l{text-transform:uppercase; letter-spacing:.16em; font-size:.75rem; color:#B9BDC3}
 
-    /* GRID HELPERS */
+    /* =============== Layout helpers */
+    .section-header{text-align:center; margin-bottom:54px}
     .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:36px}
     .grid-2{display:grid; grid-template-columns:repeat(2,1fr); gap:36px}
     @media (max-width: 980px){ .grid-3,.grid-2{grid-template-columns:1fr} }
+    .muted{color:#5A5D63}
+    .center{text-align:center}
+    .mt-12{margin-top:12px} .mt-20{margin-top:20px} .mt-28{margin-top:28px} .mt-36{margin-top:36px}
 
-    /* CARDS */
+    /* =============== Cards / elements */
     .card{
-      background:#fff; border:1px solid rgba(180,180,180,.25);
-      border-top:2px solid var(--gold); border-radius:14px; padding:26px;
+      background:#fff; border:1px solid rgba(0,0,0,.08); border-radius:14px; padding:26px;
       box-shadow:0 8px 32px rgba(0,0,0,.06);
     }
-    .card--cream{background:var(--paper)}
+    .card--tone{background:var(--paper)}
     .icon{font-size:1.6rem; line-height:1}
 
-    /* STRATEGY / PACKAGES */
-    .section-header{text-align:center; margin-bottom:54px}
+    /* =============== Strategy + Packages */
     .campaign-card{transition:transform .2s ease, box-shadow .2s ease}
     .campaign-card:hover{transform:translateY(-8px); box-shadow:0 16px 44px rgba(0,0,0,.10)}
     .metrics{display:flex; gap:28px; justify-content:center; padding-top:12px; margin-top:8px; border-top:1px solid rgba(0,0,0,.08); font-size:.95rem}
-    .packages{background:var(--cream)}
+
+    .packages{background:var(--stone)}
     .package{
-      position:relative; background:#fff; border:1px solid rgba(0,0,0,.06); border-radius:16px; overflow:hidden;
+      position:relative; background:#fff; border:1px solid rgba(0,0,0,.06); border-radius:16px; overflow:visible; /* ensure no clipping */
       box-shadow:0 14px 50px rgba(0,0,0,.10)
     }
-    .package .hd{background:var(--charcoal); color:#fff; text-align:center; padding:32px 20px}
+    .package .hd{background:#111; color:#fff; text-align:center; padding:32px 20px}
     .price{font-family:"Fraunces",serif; font-size:2.6rem; color:var(--gold); line-height:1}
     .badge-rec{
-      position:absolute; top:14px; right:18px; background:var(--gold); color:#fff; font-weight:700; letter-spacing:.12em;
+      position:absolute; top:14px; right:18px; background:var(--gold); color:#111; font-weight:800; letter-spacing:.12em;
       padding:6px 14px; border-radius:999px; font-size:.7rem; text-transform:uppercase
     }
-    .feature-list{list-style:none; margin:0; padding:26px 28px}
+    .feature-list{list-style:none; margin:0; padding:26px 28px; color:#31343A}
     .feature-list li{padding:10px 0; border-bottom:1px solid rgba(0,0,0,.06)}
     .feature-list li strong{color:var(--gold)}
-    .kv{color:#5b5d60; font-size:.95rem; text-align:center}
 
-    /* PROGRAM DETAILS “second page” */
-    #program{background:linear-gradient(180deg,#fff 0,#fff8ef 38%,#fff 100%)}
-    .narrow{max-width:1100px}
+    /* =============== Program (“second page”) */
+    #program{background:linear-gradient(180deg,#fff 0,#fff 40%,#FBFBFC 100%)}
     .pillars .card{display:flex; gap:14px; align-items:flex-start}
-    .step{position:relative; padding-left:42px}
-    .step::before{
-      content:attr(data-step); position:absolute; left:0; top:.1rem; width:28px; height:28px; border-radius:50%;
-      background:radial-gradient(75% 75% at 30% 30%, #fff 0, #fff 35%, rgba(255,255,255,.25) 36%), linear-gradient(135deg, var(--gold), var(--gold-2));
-      color:#111; display:grid; place-items:center; font-weight:800; font-size:.8rem; box-shadow:0 4px 12px rgba(0,0,0,.15)
+
+    /* Clean, robust steps with CSS counters (no weird dots, no clipping) */
+    .steps{counter-reset: step}
+    .steps li{
+      list-style:none; position:relative; padding-left:48px; margin:18px 0; line-height:1.6; /* space so nothing gets cut */
     }
-    .timeline{
-      position:relative; border-left:2px solid rgba(0,0,0,.08); margin-left:10px; padding-left:24px
+    .steps li::before{
+      counter-increment: step; content: counter(step);
+      position:absolute; left:0; top:.1rem; width:30px; height:30px; border-radius:50%;
+      background:linear-gradient(135deg,var(--gold),var(--gold-2));
+      color:#111; display:inline-flex; align-items:center; justify-content:center;
+      font-weight:800; font-size:.85rem; box-shadow:0 4px 12px rgba(0,0,0,.15)
     }
-    .tl-item{position:relative; margin-bottom:18px}
-    .tl-item::before{
-      content:""; position:absolute; left:-10px; top:.35rem; width:12px; height:12px; border-radius:50%;
-      background:linear-gradient(135deg,var(--gold),var(--gold-2)); box-shadow:0 0 0 3px #fff
+
+    /* Simple, safe timeline bullets (no overlap with text) */
+    .timeline{margin:6px 0 0 0; padding:0}
+    .timeline li{
+      list-style:none; position:relative; padding-left:22px; margin:14px 0; line-height:1.6;
+      border-left:2px solid rgba(0,0,0,.08);
     }
-    .measure{
-      display:grid; grid-template-columns:1.15fr .85fr; gap:26px
+    .timeline li::before{
+      content:""; position:absolute; left:-7px; top:.55rem; width:10px; height:10px; border-radius:50%;
+      background:linear-gradient(135deg,var(--gold),var(--gold-2)); box-shadow:0 0 0 3px #fff;
     }
-    @media (max-width: 980px){ .measure{grid-template-columns:1fr} }
+    .timeline strong{display:block; margin-bottom:2px}
+
+    /* Measurement tables */
+    .mini-table{width:100%; border-collapse:collapse; font-size:.97rem}
+    .mini-table td{padding:8px 6px; border-bottom:1px solid rgba(0,0,0,.06)}
 
     /* CTA */
-    .cta{background:#111; color:#fff; text-align:center; padding:110px 0}
-    .btn{display:inline-block; padding:16px 38px; border-radius:999px; text-decoration:none; font-weight:700; letter-spacing:.14em; text-transform:uppercase}
+    .cta{background:#0D0D0D; color:#fff; text-align:center; padding:110px 0}
+    .btn{
+      display:inline-block; padding:16px 38px; border-radius:999px; text-decoration:none; font-weight:800; letter-spacing:.14em; text-transform:uppercase
+    }
     .btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold-2)); color:#111}
     .btn-primary:hover{filter:saturate(1.1) contrast(1.05)}
+    .btn-ghost{background:#fff; color:#111; border:1px solid rgba(0,0,0,.12)}
     .contact{margin-top:26px; font-size:1.05rem}
     .contact a{color:var(--gold); text-decoration:none}
 
-    /* Utilities */
-    .muted{color:#5a5d60}
-    .center{text-align:center}
-    .mt-12{margin-top:12px}
-    .mt-20{margin-top:20px}
-    .mt-28{margin-top:28px}
-    .mt-36{margin-top:36px}
-    .mt-48{margin-top:48px}
-    .pt-0{padding-top:0}
-    .pb-0{padding-bottom:0}
+    /* Responsive tweaks */
+    @media (max-width:1024px){section{padding:90px 0}}
   </style>
 </head>
 <body>
-
-  <!-- NAV -->
+  <!-- =============== NAV -->
   <header class="nav">
     <div class="container nav-inner">
       <div class="brand">
         <img src="Plasencia_logo_WHITE.png" alt="Plasencia" class="nav-logo logo-plasencia" loading="lazy" decoding="async">
-        <span class="gold-rule" style="width:1px; height:36px"></span>
         <img src="CA_logo_WHITE.png" alt="Cigar Aficionado" class="nav-logo logo-ca" loading="lazy" decoding="async">
       </div>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
@@ -181,16 +187,19 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
+  <!-- =============== HERO (deeper, no yellow) -->
+  <section class="hero" aria-label="Hero">
     <video autoplay muted loop playsinline poster="Girl.jpg">
       <source src="Girl.mp4" type="video/mp4">
     </video>
     <div class="content">
       <span class="badge">Cigar Aficionado × Plasencia 1865</span>
-      <h1 class="mt-20">160 Years of <span style="color:var(--gold)">Unbroken Legacy</span></h1>
-      <p class="lede mt-12">Six generations. One family. One extraordinary story.</p>
-      <div class="ornament"></div>
+      <!-- One line on desktop; allowed to wrap on mobile -->
+      <h1 class="title">160 Years of <span class="no-wrap" style="color:var(--gold)">Unbroken&nbsp;Legacy</span></h1>
+      <p class="lede">Six generations. One family. One extraordinary story.</p>
+
+      <div class="gold-rule" style="opacity:.7"></div>
+
       <div class="stats">
         <div class="stat"><div class="n">1865</div><div class="l">Established</div></div>
         <div class="stat"><div class="n">6</div><div class="l">Generations</div></div>
@@ -200,28 +209,27 @@
     </div>
   </section>
 
-  <!-- PARTNERSHIP -->
+  <!-- =============== PARTNERSHIP -->
   <section id="partnership">
     <div class="container">
       <div class="section-header">
-        <div class="eyebrow">Why This Partnership</div>
         <h2>The Industry’s Proof—On the Industry’s Stage</h2>
         <p class="lede center">In luxury marketing, heritage is claimed. With Plasencia, it’s proven.</p>
         <div class="gold-rule"></div>
       </div>
 
       <div class="grid-3">
-        <div class="card card--cream">
+        <div class="card card--tone">
           <div class="icon">👥</div>
           <h3 class="mt-12">The Audience</h3>
-          <p class="muted">Cigar Aficionado defines the conversation. We reach readers and buyers who invest in experiences, collect stories, and celebrate craftsmanship.</p>
+          <p class="muted">Cigar Aficionado defines the conversation. We reach readers, collectors, and buyers who invest in experiences and celebrate craftsmanship.</p>
         </div>
-        <div class="card card--cream">
+        <div class="card card--tone">
           <div class="icon">🧭</div>
           <h3 class="mt-12">The Opportunity</h3>
-          <p class="muted">Today’s consumer verifies claims. Plasencia offers what money can’t manufacture: authenticity and provenance.</p>
+          <p class="muted">Today’s buyer verifies claims. Plasencia offers what money can’t manufacture: authenticity and provenance that stand up to scrutiny.</p>
         </div>
-        <div class="card card--cream">
+        <div class="card card--tone">
           <div class="icon">🏛️</div>
           <h3 class="mt-12">The Execution</h3>
           <p class="muted">We build market leadership—every dollar traceable, every impression measurable, every story authentic.</p>
@@ -240,17 +248,15 @@
         <div class="card">
           <h3>Positioning</h3>
           <p class="muted">The grower behind celebrated brands steps forward. From field to band, the Plasencia standard becomes the measure of premium.</p>
-          <div class="ornament" style="margin-top:10px"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- STRATEGY -->
+  <!-- =============== STRATEGY -->
   <section id="strategy" class="pt-0">
     <div class="container">
       <div class="section-header">
-        <div class="eyebrow">Campaign Strategy</div>
         <h2>Editorial Craft × Precision Delivery</h2>
         <div class="gold-rule"></div>
       </div>
@@ -259,7 +265,7 @@
         <div class="card campaign-card">
           <div class="icon">📖</div>
           <h3 class="mt-12">Print Leadership</h3>
-          <p class="muted">Multi-issue schedule aligned to tentpoles and key editorial moments.</p>
+          <p class="muted">Multi-issue schedule aligned to tentpoles and signature editorial moments.</p>
           <div class="metrics"><span><strong style="color:var(--gold)">Select:</strong> 12× — $310,800</span><span><strong style="color:var(--gold)">Signature:</strong> $452,300</span></div>
         </div>
         <div class="card campaign-card">
@@ -286,18 +292,17 @@
         <div class="card campaign-card">
           <div class="icon">📧</div>
           <h3 class="mt-12">Dedicated Email</h3>
-          <p class="muted">Direct, measurable touchpoints to verified buyers.</p>
+          <p class="muted">Direct, measurable touchpoints to verified buyers and collectors.</p>
           <div class="metrics"><span><strong style="color:var(--gold)">Select:</strong> 2× — 100K</span><span><strong style="color:var(--gold)">Signature:</strong> 3× — 150K</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- INVESTMENT -->
+  <!-- =============== INVESTMENT -->
   <section id="investment" class="packages">
     <div class="container">
       <div class="section-header">
-        <div class="eyebrow">Investment Options</div>
         <h2>Two Paths to Category Leadership</h2>
         <div class="gold-rule"></div>
       </div>
@@ -346,96 +351,97 @@
         </div>
       </div>
 
-      <p class="kv mt-20">Figures reflect your provided pricing and totals; impression counts are stated per package for accuracy.</p>
+      <p class="muted center mt-20">Figures reflect your provided pricing and totals; impression counts are stated per package for accuracy.</p>
     </div>
   </section>
 
-  <!-- PROGRAM DETAILS (THE “SECOND PAGE”) -->
+  <!-- =============== PROGRAM DETAILS (SECOND PAGE CONTENT) -->
   <section id="program">
-    <div class="container narrow">
+    <div class="container">
       <div class="section-header">
-        <div class="eyebrow">Program Details</div>
         <h2>The Big Idea: Prove, Then Lead</h2>
-        <p class="lede center">Plasencia’s 160-year truth, elevated through editorial craft and delivered with precision to collectors and buyers who move the market.</p>
+        <p class="lede center">Plasencia’s 160-year truth, elevated through editorial craft and delivered with precision to readers, collectors, and buyers who move the market.</p>
         <div class="gold-rule"></div>
       </div>
 
-      <!-- ATTRIBUTES / PILLARS -->
-      <div class="pillars grid-3">
+      <!-- Benefits / Attributes -->
+      <div class="grid-3 pillars">
         <div class="card">
           <div class="icon">🔏</div>
           <div>
             <h3>Authenticity</h3>
-            <p class="muted">From field to band: family, names, and practices that stand up to scrutiny.</p>
+            <p class="muted">From field to band: family, names, and practices that stand up to scrutiny and create trust at first contact.</p>
           </div>
         </div>
         <div class="card">
           <div class="icon">🌿</div>
           <div>
             <h3>Provenance</h3>
-            <p class="muted">Stewardship over generations—including organic practices—and a traceable supply story.</p>
+            <p class="muted">Stewardship over generations—including organic practices—and a traceable supply story buyers can verify.</p>
           </div>
         </div>
         <div class="card">
           <div class="icon">🛠️</div>
           <div>
             <h3>Craft</h3>
-            <p class="muted">Editorial presentation that treats the work as art—flip covers, long-form, and filmic cuts.</p>
+            <p class="muted">Editorial presentation that treats the work as art—flip covers, long-form features, and filmic cuts.</p>
           </div>
         </div>
       </div>
 
-      <!-- HOW IT WORKS -->
+      <!-- How it works -->
       <div class="grid-2 mt-36">
         <div class="card">
           <h3>How the Program Works</h3>
-          <div class="step mt-12" data-step="1">
-            <strong>Discover</strong>
-            <p class="muted">Editorial discovery via homepage placement, print moments, and Cigar Watch.</p>
-          </div>
-          <div class="step mt-12" data-step="2">
-            <strong>Prove</strong>
-            <p class="muted">#160Moments content and flip-cover storytelling establish heritage and process.</p>
-          </div>
-          <div class="step mt-12" data-step="3">
-            <strong>Engage</strong>
-            <p class="muted">Native extension and paid social sequence assets to qualified readers and buyers.</p>
-          </div>
-          <div class="step mt-12" data-step="4">
-            <strong>Invite</strong>
-            <p class="muted">Dedicated email and VIP activations invite trials, lists, and retail moments.</p>
-          </div>
-          <div class="step mt-12" data-step="5">
-            <strong>Measure</strong>
-            <p class="muted">Dashboards unify delivery, engagement, and outcome metrics for optimization.</p>
-          </div>
+          <ol class="steps">
+            <li>
+              <strong>Discover</strong>
+              <div class="muted">Editorial discovery via homepage placement, print moments, and Cigar Watch.</div>
+            </li>
+            <li>
+              <strong>Prove</strong>
+              <div class="muted">#160Moments content and flip-cover storytelling establish heritage and process.</div>
+            </li>
+            <li>
+              <strong>Engage</strong>
+              <div class="muted">Native extension and paid social sequence assets to qualified readers and buyers.</div>
+            </li>
+            <li>
+              <strong>Invite</strong>
+              <div class="muted">Dedicated email and VIP activations invite trials, lists, and retail moments.</div>
+            </li>
+            <li>
+              <strong>Measure</strong>
+              <div class="muted">Dashboards unify delivery, engagement, and outcome metrics for optimization.</div>
+            </li>
+          </ol>
         </div>
 
         <div class="card">
           <h3>Sequenced Storytelling</h3>
-          <div class="timeline mt-12">
-            <div class="tl-item">
+          <ul class="timeline">
+            <li>
               <strong>Origin</strong>
-              <div class="muted">Family history, fields, and philosophy establish the “why.”</div>
-            </div>
-            <div class="tl-item">
+              <span class="muted">Family history, fields, and philosophy establish the “why.”</span>
+            </li>
+            <li>
               <strong>Process</strong>
-              <div class="muted">Seed to fermentation—craft steps revealed with evidence.</div>
-            </div>
-            <div class="tl-item">
+              <span class="muted">Seed to fermentation—craft steps revealed with evidence.</span>
+            </li>
+            <li>
               <strong>Signature</strong>
-              <div class="muted">Lines and blends tied to story chapters and moments.</div>
-            </div>
-            <div class="tl-item">
+              <span class="muted">Lines and blends tied to story chapters and moments.</span>
+            </li>
+            <li>
               <strong>Invitation</strong>
-              <div class="muted">How to taste, collect, and experience—plus where to act.</div>
-            </div>
-          </div>
+              <span class="muted">How to taste, collect, and experience—plus where to act.</span>
+            </li>
+          </ul>
         </div>
       </div>
 
-      <!-- MEASUREMENT -->
-      <div class="measure mt-36">
+      <!-- Measurement -->
+      <div class="grid-2 mt-36">
         <div class="card">
           <h3>Attribution & Measurement</h3>
           <p class="muted">Every dollar traceable. Every impression measurable. We deliver transparent reach, engagement quality, and outcome indicators.</p>
@@ -448,14 +454,14 @@
         </div>
         <div class="card">
           <h3>Package Components (Recap)</h3>
-          <table style="width:100%; border-collapse:collapse; font-size:.97rem">
+          <table class="mini-table">
             <tbody>
-              <tr><td style="padding:8px 6px; border-bottom:1px solid rgba(0,0,0,.06)">Select Digital</td><td style="padding:8px 6px; border-bottom:1px solid rgba(0,0,0,.06)"><strong>$40,384</strong> — 1,096,000 imps</td></tr>
-              <tr><td style="padding:8px 6px; border-bottom:1px solid rgba(0,0,0,.06)">Signature Digital</td><td style="padding:8px 6px; border-bottom:1px solid rgba(0,0,0,.06)"><strong>$74,794</strong> — 1,816,880 imps</td></tr>
-              <tr><td style="padding:8px 6px; border-bottom:1px solid rgba(0,0,0,.06)">Select Print</td><td style="padding:8px 6px; border-bottom:1px solid rgba(0,0,0,.06)">$310,800 (12×)</td></tr>
-              <tr><td style="padding:8px 6px; border-bottom:1px solid rgba(0,0,0,.06)">Signature Print</td><td style="padding:8px 6px; border-bottom:1px solid rgba(0,0,0,.06)">$452,300</td></tr>
-              <tr><td style="padding:8px 6px; border-bottom:1px solid rgba(0,0,0,.06)">Big Smoke (both)</td><td style="padding:8px 6px; border-bottom:1px solid rgba(0,0,0,.06)">$10,000</td></tr>
-              <tr><td style="padding:8px 6px"><strong>Total</strong></td><td style="padding:8px 6px"><strong>$361,184</strong> / <strong>$537,094</strong></td></tr>
+              <tr><td>Select Digital</td><td><strong>$40,384</strong> — 1,096,000 imps</td></tr>
+              <tr><td>Signature Digital</td><td><strong>$74,794</strong> — 1,816,880 imps</td></tr>
+              <tr><td>Select Print</td><td>$310,800 (12×)</td></tr>
+              <tr><td>Signature Print</td><td>$452,300</td></tr>
+              <tr><td>Big Smoke (both)</td><td>$10,000</td></tr>
+              <tr><td><strong>Total</strong></td><td><strong>$361,184</strong> / <strong>$537,094</strong></td></tr>
             </tbody>
           </table>
         </div>
@@ -463,7 +469,7 @@
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- =============== CTA -->
   <section id="contact" class="cta">
     <div class="container">
       <h2>Let’s Build Your Legacy Campaign</h2>
@@ -473,7 +479,7 @@
           <a href="tel:203-561-3977">203-561-3977</a> • <a href="mailto:jcohen@mshanken.com">jcohen@mshanken.com</a>
         </p>
       </div>
-      <a class="btn mt-20" style="background:#fff;color:#111;border:1px solid rgba(0,0,0,.12)" onclick="window.print()">Print this Proposal</a>
+      <a class="btn btn-ghost mt-20" onclick="window.print()">Print this Proposal</a>
     </div>
   </section>
 
@@ -482,14 +488,6 @@
     const t=document.querySelector('.nav-toggle'), L=document.getElementById('navLinks');
     t?.addEventListener('click',()=>{const o=L.classList.toggle('open'); t.setAttribute('aria-expanded',o?'true':'false')});
     L?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{L.classList.remove('open'); t.setAttribute('aria-expanded','false')}));
-
-    // Optional: GA4 (uncomment & replace)
-    // (function(){
-    //   var s=document.createElement('script');
-    //   s.async=true; s.src='https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX'; document.head.appendChild(s);
-    //   window.dataLayer=window.dataLayer||[]; function gtag(){dataLayer.push(arguments)}; window.gtag=gtag;
-    //   gtag('js',new Date()); gtag('config','G-XXXXXXXXXX');
-    // })();
   </script>
 </body>
 </html>
